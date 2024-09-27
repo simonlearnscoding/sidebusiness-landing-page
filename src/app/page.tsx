@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Bebas_Neue } from "@next/font/google";
 import { Globe } from "@phosphor-icons/react/dist/ssr";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import Marquee from "react-fast-marquee";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -15,7 +16,7 @@ const Header = () => (
     >
       Uniting BRANDS with their VISIONS
     </div>
-    <div className="font-sans text-zinc-100 text-3xl mt-4  font-light  max-w-sm ">
+    <div className="font-sans text-zinc-100 text-3xl mt-4  font-light  leading-normal max-w-lg ">
       {" "}
       WE BELIEVE THAT THOSE WHO DARE WILL FIND THEIR PATH
     </div>
@@ -36,7 +37,26 @@ const Navbar = () => (
     </div>
   </div>
 );
+const Footer = () => {
+  const skills = ["DESIGN", "DEVELOPMENT", "MARKETING"];
+  const duplicateSkills = [...skills, ...skills];
 
+  return (
+    <div className="overflow-hidden absolute bottom-28 w-full">
+      <Marquee>
+        <div
+          className={`flex items-center ${bebasNeue.className} text-zinc-50 opacity-30 text-7xl `}
+        >
+          {duplicateSkills.map((skill, index) => (
+            <div key={index} className="mx-8 whitespace-nowrap">
+              {skill}
+            </div>
+          ))}
+        </div>
+      </Marquee>
+    </div>
+  );
+};
 export default function Home() {
   return (
     <div className="w-screen h-screen relative overflow-x-hidden">
@@ -49,6 +69,7 @@ export default function Home() {
       />
 
       {/* Content */}
+      <Footer />
       <div className="flex flex-col w-full h-full bg-zinc-900 bg-noise-texture bg-cover bg-center bg-blend-overlay px-20 z-10">
         <Navbar />
         <Header />
