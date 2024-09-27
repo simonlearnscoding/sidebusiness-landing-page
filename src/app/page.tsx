@@ -39,7 +39,7 @@ const Navbar = () => (
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-screen h-screen relative overflow-x-hidden">
       {/* Background Overlay */}
       <Image
         alt={"noise"}
@@ -52,8 +52,8 @@ export default function Home() {
       <div className="flex flex-col w-full h-full bg-zinc-900 bg-noise-texture bg-cover bg-center bg-blend-overlay px-20 z-10">
         <Navbar />
         <Header />
-        <div className="absolute bottom-[-112px] right-0">
-          <Image src={"/meteor.png"} alt={"meteor"} width={600} height={600} />
+        <div className="absolute bottom-[-160px] right-[-40px]">
+          <Image src={"/meteor.png"} alt={"meteor"} width={800} height={800} />
         </div>
       </div>
     </div>
