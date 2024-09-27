@@ -11,11 +11,11 @@ const bebasNeue = Bebas_Neue({
 const Header = () => (
   <div className="flex flex-col">
     <div
-      className={`${bebasNeue.className} text-8xl max-w-2xl flex mt-4 leading-[5.5rem] text-zinc-100`}
+      className={`${bebasNeue.className} text-9xl max-w-4xl  flex mt-16  text-zinc-100`}
     >
       Uniting BRANDS with their VISIONS
     </div>
-    <div className="font-sans text-zinc-100 text-xl mt-3 leading-7 font-light  max-w-sm ">
+    <div className="font-sans text-zinc-100 text-3xl mt-4  font-light  max-w-sm ">
       {" "}
       WE BELIEVE THAT THOSE WHO DARE WILL FIND THEIR PATH
     </div>
@@ -27,12 +27,12 @@ const Navbar = () => (
     <div className="text-sans text-xl w-full h-full font-regular text-zinc-50">
       LOGO
     </div>
-    <div className="flex-grow flex items-center gap-2 text-zinc-100 ml-auto">
-      <Globe size={20} />
-      <div className="whitespace-nowrap font-sans text-base font-regular">
+    <div className="flex-grow flex items-center gap-4 text-zinc-100 ml-auto">
+      <Globe size={24} />
+      <div className="whitespace-nowrap font-sans text-xl font-regular">
         START YOUR JOURNEY
       </div>
-      <ArrowRight size={20} />
+      <ArrowRight size={24} />
     </div>
   </div>
 );
