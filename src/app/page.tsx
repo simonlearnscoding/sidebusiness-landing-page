@@ -46,13 +46,7 @@ const Footer = () => {
 
   return (
     <div className="select-none cursor-pointer absolute bottom-28 w-full">
-      <Marquee
-        pauseOnHover={true}
-        autoFill={true}
-        //@ts-ignore
-        speed={50}
-        gradient={false}
-      >
+      <Marquee pauseOnHover={true} autoFill={true} speed={50} gradient={false}>
         <div
           className={`flex items-center   ${bebasNeue.className} text-zinc-50 text-7xl`}
         >
