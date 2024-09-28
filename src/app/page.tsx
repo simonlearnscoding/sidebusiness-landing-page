@@ -1,4 +1,7 @@
+"use client";
+import { useRef } from "react";
 import Image from "next/image";
+import { useState } from "react";
 import { Bebas_Neue } from "@next/font/google";
 import { Globe } from "@phosphor-icons/react/dist/ssr";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
@@ -37,18 +40,27 @@ const Navbar = () => (
     </div>
   </div>
 );
+
 const Footer = () => {
   const skills = ["DESIGN", "DEVELOPMENT", "MARKETING"];
-  const duplicateSkills = [...skills, ...skills];
 
   return (
-    <div className="overflow-hidden absolute bottom-28 w-full">
-      <Marquee>
+    <div className="select-none cursor-pointer absolute bottom-28 w-full">
+      <Marquee
+        pauseOnHover={true}
+        autoFill={true}
+        //@ts-ignore
+        speed={50}
+        gradient={false}
+      >
         <div
-          className={`flex items-center ${bebasNeue.className} text-zinc-50 opacity-30 text-7xl `}
+          className={`flex items-center   ${bebasNeue.className} text-zinc-50 text-7xl`}
         >
-          {duplicateSkills.map((skill, index) => (
-            <div key={index} className="mx-8 whitespace-nowrap">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className={`mx-8 hover:scale-125  hover:opacity-100 opacity-30 transition-all whitespace-nowrap`}
+            >
               {skill}
             </div>
           ))}
@@ -57,9 +69,28 @@ const Footer = () => {
     </div>
   );
 };
+
 export default function Home() {
+  // Function to handle mouse movement
+  const [mouseXPos, setMouseX] = useState(0);
+  const [mouseYPos, setMouseY] = useState(0);
+  const animationFrameId = useRef<number | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (animationFrameId.current !== null) {
+      cancelAnimationFrame(animationFrameId.current);
+    }
+
+    animationFrameId.current = requestAnimationFrame(() => {
+      setMouseX(e.clientX);
+      setMouseY(e.clientY);
+    });
+  };
   return (
-    <div className="w-screen h-screen relative overflow-x-hidden">
+    <div
+      onMouseMove={handleMouseMove}
+      className="w-screen h-screen relative overflow-x-hidden"
+    >
       {/* Background Overlay */}
       <Image
         alt={"noise"}
@@ -73,7 +104,14 @@ export default function Home() {
       <div className="flex flex-col w-full h-full bg-zinc-900 bg-noise-texture bg-cover bg-center bg-blend-overlay px-20 z-10">
         <Navbar />
         <Header />
-        <div className="absolute bottom-[-160px] right-[-40px]">
+
+        <div
+          className="absolute bottom-[-160px]"
+          style={{
+            right: `${mouseXPos / 18 - 120}px`,
+            bottom: `${mouseYPos / 18 - 200}px`,
+          }} // Use inline style here
+        >
           <Image src={"/meteor.png"} alt={"meteor"} width={800} height={800} />
         </div>
       </div>
