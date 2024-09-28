@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="w-screen h-screen relative overflow-x-hidden"
+      className="w-screen h-screen relative overflow-hidden"
     >
       {/* Background Overlay */}
       <Image
@@ -109,7 +109,7 @@ export default function Home() {
           className="absolute bottom-[-160px]"
           style={{
             right: `${mouseXPos / 18 - 120}px`,
-            bottom: `${mouseYPos / 18 - 200}px`,
+            bottom: `${mouseYPos / 18 - 120}px`,
           }} // Use inline style here
         >
           <Image src={"/meteor.png"} alt={"meteor"} width={800} height={800} />
