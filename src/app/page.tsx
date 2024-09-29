@@ -32,6 +32,10 @@ export default function Home() {
       onMouseMove={handleMouseMove}
       className="w-screen h-screen relative overflow-hidden"
     >
+      <div className="absolute bottom-0 h-1/4 w-full z-10 pointer-events-none sm:hidden bg-gradient-to-t from-zinc-900/80 to-zinc-900/0">
+        {" "}
+      </div>
+
       {/* Background Overlay */}
       <Image
         alt={"noise"}
