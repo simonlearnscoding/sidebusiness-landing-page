@@ -9,7 +9,7 @@ const bebasNeue = Bebas_Neue({
 
 type FooterProps = {
   setIsHovered: (isHovered: boolean) => void;
-  setSelectedImageUrl: string;
+  setSelectedImageUrl: (url: string) => void;
 };
 const Footer = ({ setIsHovered, setSelectedImageUrl }: FooterProps) => {
   const skills = [
