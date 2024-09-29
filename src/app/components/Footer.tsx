@@ -1,7 +1,6 @@
 "use client";
 import Marquee from "react-fast-marquee";
 import { Bebas_Neue } from "@next/font/google";
-import useMousePositionStore from "@/store/useMousePositionStore";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -9,8 +8,8 @@ const bebasNeue = Bebas_Neue({
 });
 
 type FooterProps = {
-  setIsHovered: any;
-  setSelectedImageUrl: any;
+  setIsHovered: (isHovered: boolean) => void;
+  setSelectedImageUrl: string;
 };
 const Footer = ({ setIsHovered, setSelectedImageUrl }: FooterProps) => {
   const skills = [
