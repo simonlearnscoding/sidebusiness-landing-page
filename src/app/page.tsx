@@ -1,4 +1,5 @@
 "use client";
+import AnimatedCursor from "react-animated-cursor";
 import { useState } from "react";
 import { useRef } from "react";
 import Image from "next/image";
@@ -32,6 +33,36 @@ export default function Home() {
       onMouseMove={handleMouseMove}
       className="w-screen h-screen relative overflow-hidden"
     >
+      <AnimatedCursor
+        innerSize={12}
+        outerSize={40}
+        color="255, 255, 255"
+        innerScale={0.7}
+        outerScale={5}
+        innerStyle={{
+          background: "rgba(0, 0, 0, 0.0)",
+          border: "3px solid  #4F46E5",
+        }}
+        outerStyle={{
+          background: "rgba(0, 0, 0, 0.0)",
+          borderRadius: "50%",
+          border: "3px  solid #4F46E5",
+          boxShadow: "0 0 10px #4F46E5",
+        }}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+        ]}
+      />
       <div className="absolute bottom-0 h-1/4 w-full z-10 pointer-events-none sm:hidden bg-gradient-to-t from-zinc-900/80 to-zinc-900/0">
         {" "}
       </div>
