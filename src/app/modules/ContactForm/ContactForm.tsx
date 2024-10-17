@@ -80,7 +80,7 @@ const CTA = ({ children }: { children: React.ReactNode }) => {
 
 const ContactFormUI = () => {
   return (
-    <div className=" flex-1 flex mt-4 flex-col items-start w-10/12 h-full">
+    <div className=" flex-1 flex mt-4 flex-col items-start w-full sm:w-10/12 h-full">
       <InputWithLabel
         label={"WHAT'S YOUR NAME?"}
         description={"Type your full name"}
@@ -148,9 +148,8 @@ const ContactForm = () => {
           <input
             id="name"
             {...register("name", { required: true })}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.name ? "border-red-500" : ""
-            }`}
+            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errors.name ? "border-red-500" : ""
+              }`}
           />
           {errors.name && (
             <p className="text-red-500 text-xs italic">Name is required</p>
@@ -171,9 +170,8 @@ const ContactForm = () => {
               required: true,
               pattern: /^\S+@\S+$/i,
             })}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.email ? "border-red-500" : ""
-            }`}
+            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errors.email ? "border-red-500" : ""
+              }`}
           />
           {errors.email && (
             <p className="text-red-500 text-xs italic">Email is invalid</p>
@@ -190,9 +188,8 @@ const ContactForm = () => {
           <textarea
             id="message"
             {...register("message", { required: true })}
-            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-              errors.message ? "border-red-500" : ""
-            }`}
+            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${errors.message ? "border-red-500" : ""
+              }`}
           />
           {errors.message && (
             <p className="text-red-500 text-xs italic">Message is required</p>
@@ -203,9 +200,8 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
-              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className={`bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              }`}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
