@@ -11,9 +11,9 @@ const bebasNeue = Bebas_Neue({
 function LetsWorkTitle() {
   return (
     <div className=" w-full h-fit flex">
-      <div className="min-h-full bg-violet-600 w-2 mr-6"></div>
+      <div className="min-h-full sm:block hidden bg-violet-600 w-2 mr-6"></div>
       <div className="flex flex-col gap-4">
-        <h1 className="text-9xl">LETS WORK TOGETHER</h1>
+        <h1 className="sm:text-9xl text-7xl">LETS WORK TOGETHER</h1>
         <div className="font-sans text-xl leading-relaxed w-10/12">
           Lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus
           fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor
