@@ -14,7 +14,7 @@ function LetsWorkTitle() {
     <div className="w-full h-fit mt-8 flex z-10">
       <div className="min-h-full sm:block hidden bg-primary-500 w-2 mr-6"></div>
       <div className="flex flex-col gap-4">
-        <h1 className="sm:text-9xl sm:block hidden text-7xl">LETS WORK TOGETHER</h1>
+        <h1 className="lg:text-9xl md:text-8xl sm:block hidden text-7xl">LETS WORK TOGETHER</h1>
       </div>
     </div>
   );
@@ -29,13 +29,13 @@ export default function ContactFormSection() {
           <LetsWorkTitle />
           <ContactForm />
         </div>
-        <div className="flex justify-center items-center flex-1">
-          <div className="sm:relative hidden sm:block  z-0 w-full h-full">
+        <div className=" scale-125  lg:scale-100 hidden md:absolute z-0 translate-x-40 lg:translate-x-0 lg:flex justify-center items-center flex-1">
+          <div className=" relative     w-full h-full">
             <Image
               src="/mountain.png"
               alt="mountain"
               fill
-              className="object-cover rounded-3xl"
+              className="object-cover rounded-lg"
             />
           </div>
         </div>
