@@ -11,16 +11,10 @@ const bebasNeue = Bebas_Neue({
 
 function LetsWorkTitle() {
   return (
-    <div className="w-full h-fit flex z-10">
-      <div className="min-h-full sm:block hidden bg-violet-600 w-2 mr-6"></div>
+    <div className="w-full h-fit mt-8 flex z-10">
+      <div className="min-h-full sm:block hidden bg-primary-500 w-2 mr-6"></div>
       <div className="flex flex-col gap-4">
         <h1 className="sm:text-9xl sm:block hidden text-7xl">LETS WORK TOGETHER</h1>
-        <div className="font-sans sm:block hidden text-xl leading-relaxed w-10/12">
-          Lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus
-          fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor
-          urna. A quisque et etiam morbi lectus eros sed diam quis. Integer
-          pellentesque diam eu mollis nibh morbi.
-        </div>
       </div>
     </div>
   );
@@ -29,8 +23,7 @@ function LetsWorkTitle() {
 export default function ContactFormSection() {
   return (
     <div
-      className={`${bebasNeue.className} text-zinc-50 h-screen px-8 pb-10 pt-8 w-screen flex-1 flex-col flex`}
-    >
+      className={`${bebasNeue.className} text-zinc-50 h-screen px-8 bg-zinc-900 pb-10 pt-28 w-screen flex-1 flex-col flex`} >
       <div className="flex-1 relative w-full h-full p-2 gap-5 sm:flex-row flex-col-reverse flex">
         <div className="flex-1 flex flex-col items-start ">
           <LetsWorkTitle />
