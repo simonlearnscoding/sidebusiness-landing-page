@@ -80,7 +80,7 @@ const CTA = ({ children }: { children: React.ReactNode }) => {
 
 const ContactFormUI = () => {
   return (
-    <div className=" flex-1 flex mt-4 flex-col items-start w-full sm:w-10/12 h-full">
+    <div className=" flex-1 flex mt-8 flex-col items-start w-full sm:w-10/12 h-full">
       <InputWithLabel
         label={"WHAT'S YOUR NAME?"}
         description={"Type your full name"}
