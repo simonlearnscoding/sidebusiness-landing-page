@@ -1,19 +1,27 @@
 // app/page.tsx
+// app/page.tsx
 "use client";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import Navbar from "./components/Navbar";
 import ContactFormSection from "./modules/ContactForm";
 import HeaderSection from "./modules/Header";
+import MobileCTA from "./components/MobileCTA";
+import Comet from "./components/Comet";
+import { useSectionObserver } from "@/hooks/useSectionObserver";
 
-import Comet from "./components/Comet"; // Import the separated Comet component
 export default function Home() {
   useScrollAndMousePosition();
+
+  // List of section IDs
+  useSectionObserver(["header", "contact", "comet"]);
+
   return (
-    <div className=" overflow-x-hidden bg-zinc-900">
+    <div className="overflow-x-hidden bg-zinc-900">
       <Navbar />
-      <HeaderSection />
+      <MobileCTA />
+      <HeaderSection id="header" />
+      <ContactFormSection id="contact" />
       <Comet />
-      <ContactFormSection />
     </div>
   );
 }
