@@ -1,22 +1,93 @@
-type MeetTheTeamProps = {
-  id: string;
-};
+import Image from "next/image";
 
 const TextArea = ({}: {}) => {
   return (
-    <div className=" bg-red-300 text-white flex-1 flex">
-      <h1 className="font-bebas">MEET THE TEAM</h1>
+    <div className="bg-white pb-12">
+      <div className="  flex-1 flex p-screen pt-10 flex-col max-w-3xl">
+        <h1 className=" text-zinc-600 font-bebas">MEET THE TEAM</h1>
+        <p className="text-zinc-800">
+          Lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus
+          fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor
+          urna. A quisque et etiam morbi lectus eros sed diam quis. Integer
+          pellentesque diam eu mollis nibh morbi.
+        </p>
+      </div>
     </div>
   );
 };
 
+type MemberProps = {
+  name: string;
+  role: string;
+  description: string;
+  image: string;
+};
+const TeamMember = ({ data }: { data: MemberProps }) => {
+  return (
+    <div className="flex group flex-col relative flex-1 items-center h-[663px] w-full">
+      {/* Image that remains visible at all times */}
+      <Image
+        src={data.image} // Use data.image for the image source
+        alt={data.name}
+        fill
+        className="object-cover rounded-3xl"
+      />
+
+      {/* Overlay with transition on hover */}
+      <div className="absolute inset-0 flex justify-center items-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-5 w-full h-full rounded-3xl bg-gradient-to-t to-black/0 from-blue-500/75 z-10">
+        <div className="flex flex-col mt-auto px-7 pb-9 justify-end">
+          <div className="font-bebas text-6xl text-white transition-all duration-500 ease-in-out">
+            {data.name}
+          </div>
+          <p className="font-sans text-base text-white transition-all duration-500 ease-in-out">
+            {data.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+const TeamMembers = [
+  {
+    name: "Simon",
+    role: "DEV",
+    image: "/Team-simon.png",
+    description: `
+lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor urna. A quisque et etiam morbi lectus eros sed diam quis. Integer pellentesque diam eu mollis nibh morbi.
+    `,
+  },
+  {
+    name: "Miracle",
+    role: "DESIGN",
+    image: "/Team-miracle.png",
+    description: `
+lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor urna. A quisque et etiam morbi lectus eros sed diam quis. Integer pellentesque diam eu mollis nibh morbi.
+    `,
+  },
+  {
+    name: "James",
+    role: "MARKETING",
+    image: "/Team-james.png",
+    description: `
+lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor urna. A quisque et etiam morbi lectus eros sed diam quis. Integer pellentesque diam eu mollis nibh morbi.
+    `,
+  },
+];
 const TeamArea = ({}: {}) => {
-  return <div className="flex bg-red-200 flex-1"></div>;
+  return (
+    <div className="flex bg-zinc-900   px-20 py-12 flex-1">
+      <div className="w-full flex-grow h-full gap-10 flex ">
+        {TeamMembers.map((member) => (
+          <TeamMember data={member} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 const MeetTheTeam = ({ id }: { id: string }) => {
   return (
-    <div className=" flex flex-col flex-1 h-screen w-screen ">
+    <div className="  flex flex-col flex-1    w-screen ">
       <TextArea />
       <TeamArea />
     </div>

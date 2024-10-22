@@ -27,3 +27,18 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .p-screen {
+    @apply px-3 sm:px-16;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply font-bebas lg:text-9xl md:text-8xl sm:block  sm:text-7xl text-6xl;
+  }
+  p {
+    @apply text-lg  font-sans;
+  }
+}

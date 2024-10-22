@@ -10,7 +10,7 @@ const HeaderSection = ({ id }) => {
           {" "}
         </div>
         <Footer />
-        <div className="flex flex-col overflow-x-hidden relative w-full h-full bg-noise-texture bg-cover bg-center bg-blend-overlay px-3 sm:px-10 z-10">
+        <div className="flex flex-col overflow-x-hidden relative w-full h-full bg-noise-texture bg-cover bg-center bg-blend-overlay  p-screen z-10">
           <Header />
         </div>
       </div>
