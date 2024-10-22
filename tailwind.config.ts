@@ -3,10 +3,6 @@ import { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config: Config = {
-
-h1 {
-  @apply font-bebas text-4xl font-bold text-primary-500;
-}
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
