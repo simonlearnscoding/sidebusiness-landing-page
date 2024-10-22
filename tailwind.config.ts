@@ -1,6 +1,12 @@
+import { text } from "stream/consumers";
 import { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config: Config = {
+
+h1 {
+  @apply font-bebas text-4xl font-bold text-primary-500;
+}
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,14 +15,16 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        bebas: ["Bebas Neue", "cursive"], // Ensure fallback font is included
+        bebas: "var(--font-bebas-neue)",
+        sans: ["Bebas Neue", ...fontFamily.sans], // Add Bebas Neue to the default sans family
       },
+
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
 
         primary: {
-          500: '#4D26E6',
+          500: "#4D26E6",
         },
       },
     },
