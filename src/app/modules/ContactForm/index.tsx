@@ -1,13 +1,7 @@
 // components/ContactFormSection.tsx
 import React from "react";
 import ContactForm from "./ContactForm";
-import { Bebas_Neue } from "@next/font/google";
 import Image from "next/image";
-
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 function LetsWorkTitle() {
   return (
@@ -24,7 +18,9 @@ export default function ContactFormSection({ id }) {
   return (
     <section id={id}>
       <div
-        className={`${bebasNeue.className} text-zinc-50 h-screen p-screen bg-zinc-900 sm:pb-10  pt-28  w-screen flex-1 flex-col flex`}
+        className={
+          "font-bebas text-zinc-50 h-screen p-screen bg-zinc-900 sm:pb-10  pt-28  w-screen flex-1 flex-col flex"
+        }
       >
         <div className="flex-1 relative w-full h-full p-2 gap-5 sm:flex-row flex-col-reverse flex">
           <div className="flex-1 flex flex-col items-start ">

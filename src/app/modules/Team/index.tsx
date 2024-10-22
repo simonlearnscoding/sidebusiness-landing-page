@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const TextArea = ({}: {}) => {
+const TextArea = () => {
   return (
     <div className="bg-white pb-12">
       <div className="  flex-1 flex p-screen pt-10 flex-col max-w-3xl">
@@ -73,12 +73,12 @@ lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imper
     `,
   },
 ];
-const TeamArea = ({}: {}) => {
+const TeamArea = () => {
   return (
     <div className="flex bg-zinc-900   px-20 py-12 flex-1">
       <div className="w-full flex-grow h-full gap-10 flex ">
         {TeamMembers.map((member) => (
-          <TeamMember data={member} />
+          <TeamMember key={member.name} data={member} />
         ))}
       </div>
     </div>
@@ -86,6 +86,7 @@ const TeamArea = ({}: {}) => {
 };
 
 const MeetTheTeam = ({ id }: { id: string }) => {
+  console.log(id);
   return (
     <div className="  flex flex-col flex-1    w-screen ">
       <TextArea />
