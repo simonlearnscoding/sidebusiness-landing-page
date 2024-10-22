@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const TextArea = () => {
   return (
-    <div className="bg-white pb-12">
-      <div className="  flex-1 flex p-screen pt-10 flex-col max-w-3xl">
+    <div className="bg-white flex w-full ">
+      <div className="  flex-1 flex p-screen py-16  flex-col max-w-3xl">
         <h1 className=" text-zinc-600 font-bebas">MEET THE TEAM</h1>
         <p className="text-zinc-800">
           Lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus
@@ -11,6 +11,9 @@ const TextArea = () => {
           urna. A quisque et etiam morbi lectus eros sed diam quis. Integer
           pellentesque diam eu mollis nibh morbi.
         </p>
+      </div>
+      <div className="mr-24 ml-auto mt-12  h-[233px] relative w-20">
+        <Image fill src={"/meet-the-team.png"} alt={"svg"} />
       </div>
     </div>
   );
@@ -75,7 +78,7 @@ lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imper
 ];
 const TeamArea = () => {
   return (
-    <div className="flex bg-zinc-900   px-20 py-12 flex-1">
+    <div className="flex bg-zinc-900   px-20 py-16 flex-1">
       <div className="w-full flex-grow h-full gap-10 flex ">
         {TeamMembers.map((member) => (
           <TeamMember key={member.name} data={member} />

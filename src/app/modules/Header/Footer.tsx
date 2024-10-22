@@ -1,13 +1,7 @@
 "use client";
 import Marquee from "react-fast-marquee";
-import { Bebas_Neue } from "@next/font/google";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const Footer = ({ }) => {
+const Footer = ({}) => {
   const skills = [
     {
       label: "DESIGN",
@@ -21,11 +15,14 @@ const Footer = ({ }) => {
   ];
 
   return (
-    <div className="select-none  absolute bottom-14 w-full hidden sm:block">
-      <Marquee autoFill={true} speed={120} gradient={false}>
-        <div
-          className={`flex items-center ${bebasNeue.className} text-zinc-50 text-7xl`}
-        >
+    <div className="select-none   absolute  bottom-14 w-full hidden py-2 bg-zinc-700/5 sm:block">
+      <Marquee
+        autoFill={true}
+        speed={120}
+        className="overflow-hidden"
+        gradient={false}
+      >
+        <div className={"flex items-center font-bebas   text-zinc-50 text-6xl"}>
           {skills.map((skill, index) => (
             <div
               key={index}
