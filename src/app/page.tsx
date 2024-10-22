@@ -21,8 +21,9 @@ export default function Home() {
       <Navbar />
       <MobileCTA />
       <HeaderSection id="header" />
-      <ContactFormSection id="contact" />
+
       <MeetTheTeam id="team" />
+      <ContactFormSection id="contact" />
       <Comet />
     </div>
   );
