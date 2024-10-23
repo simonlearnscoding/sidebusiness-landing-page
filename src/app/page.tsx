@@ -9,6 +9,7 @@ import MobileCTA from "./components/MobileCTA";
 import Comet from "./components/Comet";
 import { useSectionObserver } from "@/hooks/useSectionObserver";
 import MeetTheTeam from "./modules/Team";
+import OurServicesSection from "./modules/OurServices";
 
 export default function Home() {
   useScrollAndMousePosition();
@@ -23,6 +24,7 @@ export default function Home() {
       <HeaderSection id="header" />
       <MeetTheTeam id="team" />
       <ContactFormSection id="contact" />
+      <OurServicesSection id="services" />
       <Comet />
     </div>
   );

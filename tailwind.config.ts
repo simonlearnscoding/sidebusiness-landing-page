@@ -20,7 +20,10 @@ const config: Config = {
         foreground: "var(--foreground)",
 
         primary: {
-          500: "#4D26E6",
+          500: "#6366F1",
+        },
+        secondary: {
+          500: "#E1E7D5",
         },
       },
     },
