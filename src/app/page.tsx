@@ -23,8 +23,9 @@ export default function Home() {
       <MobileCTA />
       <HeaderSection id="header" />
       <MeetTheTeam id="team" />
-      <ContactFormSection id="contact" />
+
       <OurServicesSection id="services" />
+      <ContactFormSection id="contact" />
       <Comet />
     </div>
   );
