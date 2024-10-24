@@ -96,7 +96,7 @@ const OurServicesSection = ({ id }: { id: string }) => {
   const [hoveredSection, setHoveredSection] = useState<number | null>(null);
 
   return (
-    <>
+    <section id={id}>
       <div className="flex flex-col max-h-screen w-screen">
         <HeaderSection />
         {services.map((service, index) => (
@@ -110,7 +110,7 @@ const OurServicesSection = ({ id }: { id: string }) => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
