@@ -70,18 +70,19 @@ From complex features to integrated third-party systems, we deliver a smooth use
     role: "DESIGN",
     image: "/Team-miracle.png",
     description: `
-We here at _(insert company name) create intelligent websites that are visible to the world.
-This is done by creating a website with organic traffic and search engine ranking so people can actually find it.<br /><br />
-A competitor analysis will be done, and your SEO campaign will be monitored, ensuring the website we create is competitive in its presentation with the most optimized keywords and Google Analytics.
+I help you stay in touch with your users' expectations of your product.<br /><br />
+By delivering user-centric solutions, I explore what your users want and need, creating designs that are not only beautiful but also meaningful and pleasant to interact with.
     `,
   },
   {
     name: "James",
     role: "MARKETING",
     image: "/Team-james.png",
+
     description: `
-I help you stay in touch with your users' expectations of your product.<br /><br />
-By delivering user-centric solutions, I explore what your users want and need, creating designs that are not only beautiful but also meaningful and pleasant to interact with.
+We here at _(insert company name) create intelligent websites that are visible to the world.
+This is done by creating a website with organic traffic and search engine ranking so people can actually find it.<br /><br />
+A competitor analysis will be done, and your SEO campaign will be monitored, ensuring the website we create is competitive in its presentation with the most optimized keywords and Google Analytics.
     `,
   },
 ];
