@@ -32,7 +32,7 @@ const LetsChat = ({ id }: { id: string }) => {
             rel="noopener noreferrer"
             className="mt-auto h-60 cursor-pointer  bg-primary-500 w-full text-9xl flex items-center justify-start pl-24 overflow-hidden relative group"
           >
-            <span className="absolute inset-0 bg-amber-500 transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
+            <span className="absolute inset-0 bg-green-500 transform -translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
             <span className="relative z-10 group-hover:text-zinc-800 animate-color  text-white">
               BOOK A CALL
             </span>
