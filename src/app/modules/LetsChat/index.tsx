@@ -23,7 +23,7 @@ const LetsChat = ({ id }: { id: string }) => {
           </div>
 
           <div className="text-zinc-950  font-bebas mb-10 ml-24 text-[280px]">
-            LET'S HAVE A CHAT
+            Let&apos;s HAVE A CHAT
           </div>
           <a
             href="https://calendly.com/simon-muscas"
