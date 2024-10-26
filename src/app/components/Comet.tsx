@@ -15,7 +15,7 @@ const Comet = () => {
 
   return (
     <div
-      className="absolute opacity-80 right-0 max-w-screen sm:scale-100 overflow-x-hidden scale-150 top-20 z-0 translate-x-0"
+      className="absolute opacity-30 right-0 max-w-screen  sm:scale-100 overflow-x-hidden scale-150 top-20 z-0 translate-x-0"
       style={{
         opacity: 1 - scrollPos / 1000, // Fade out as user scrolls
         filter: `blur(${scrollPos / 200}px)`, // Apply blur effect based on scroll position
