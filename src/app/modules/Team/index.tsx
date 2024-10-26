@@ -25,28 +25,30 @@ type MemberProps = {
   description: string;
   image: string;
 };
+
 const TeamMember = ({ data }: { data: MemberProps }) => {
   return (
     <div className="flex group flex-col p-[1px] bg-zinc-300 hover:bg-gradient-to-b hover:from-zinc-300/80 hover:to-primary-500 rounded-3xl relative flex-1 items-center h-[663px] w-full">
-      {/* Wrapper with a border */}
-      <div className="relative h-full w-full rounded-3xl  ">
+      {/* Image Wrapper */}
+      <div className="relative h-full w-full rounded-3xl">
         <Image
           src={data.image}
           alt={data.name}
           fill
-          className="object-cover rounded-3xl" // Keep this for the image, no need to add a border here
+          className="object-cover rounded-3xl"
         />
       </div>
 
-      {/* Overlay with transition on hover */}
+      {/* Overlay with Transition on Hover */}
       <div className="absolute inset-0 flex justify-center items-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 w-full h-full rounded-3xl bg-gradient-to-t to-black/0 from-primary-500/75 z-10">
         <div className="flex flex-col mt-auto px-7 pb-9 justify-end">
           <div className="font-bebas text-6xl text-white transition-all duration-500 ease-in-out">
             {data.name}
           </div>
-          <p className="font-sans text-base text-white transition-all duration-500 ease-in-out">
-            {data.description}
-          </p>
+          <p
+            className="font-sans text-base text-white transition-all leading-5 duration-500 ease-in-out"
+            dangerouslySetInnerHTML={{ __html: data.description }}
+          />
         </div>
       </div>
     </div>
@@ -58,7 +60,9 @@ const TeamMembers = [
     role: "DEV",
     image: "/Team-simon.png",
     description: `
-lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor urna. A quisque et etiam morbi lectus eros sed diam quis. Integer pellentesque diam eu mollis nibh morbi.
+We customize your website for optimal performance that goes beyond what a typical design agency can offer.
+No templates or pre-built solutions – instead, a proper tailor-made website that will help you achieve business needs and success.  <br /><br />
+From complex features to integrated third-party systems, we deliver a smooth user experience that keeps customers on your site, creating more conversion opportunities.
     `,
   },
   {
@@ -66,15 +70,19 @@ lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imper
     role: "DESIGN",
     image: "/Team-miracle.png",
     description: `
-lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor urna. A quisque et etiam morbi lectus eros sed diam quis. Integer pellentesque diam eu mollis nibh morbi.
+I help you stay in touch with your users' expectations of your product.<br /><br />
+By delivering user-centric solutions, I explore what your users want and need, creating designs that are not only beautiful but also meaningful and pleasant to interact with.
     `,
   },
   {
     name: "James",
     role: "MARKETING",
     image: "/Team-james.png",
+
     description: `
-lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor urna. A quisque et etiam morbi lectus eros sed diam quis. Integer pellentesque diam eu mollis nibh morbi.
+We here at _(insert company name) create intelligent websites that are visible to the world.
+This is done by creating a website with organic traffic and search engine ranking so people can actually find it.<br /><br />
+A competitor analysis will be done, and your SEO campaign will be monitored, ensuring the website we create is competitive in its presentation with the most optimized keywords and Google Analytics.
     `,
   },
 ];
