@@ -1,7 +1,7 @@
 "use client";
 import { ArrowRight } from "@phosphor-icons/react";
 import { useSectionStore } from "@/store/useSectionStore";
-import ParallaxComponent from "./Parallax.tsx";
+// import ParallaxComponent from "./Parallax.tsx";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 
