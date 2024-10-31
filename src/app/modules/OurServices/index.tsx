@@ -1,7 +1,7 @@
 "use client";
 import { ArrowRight } from "@phosphor-icons/react";
 import { useSectionStore } from "@/store/useSectionStore";
-
+import ParallaxComponent from "./Parallax.tsx";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 
@@ -14,8 +14,9 @@ const HeaderSection = () => {
         className="overflow-hidden"
         gradient={false}
       >
-        <div className="font-bebas h-full flex items-center text-9xl">
+        <div className="font-bebas h-full flex  items-center text-9xl">
           <div className="">OUR SERVICES</div>
+          <div className="w-4 h-4 mx-8 bg-zinc-200"> </div>
         </div>
       </Marquee>
     </div>
@@ -95,6 +96,7 @@ const services = [
 const OurServicesSection = ({ id }: { id: string }) => {
   const [hoveredSection, setHoveredSection] = useState<number | null>(null);
 
+  // return <ParallaxComponent />;
   return (
     <section id={id}>
       <div className="flex flex-col max-h-screen w-screen">

@@ -1,11 +1,11 @@
-// store/useSectionStore.ts
-// store/useSectionStore.ts
 import { create } from "zustand";
 
 interface SectionStore {
   activeSection: string;
   setActiveSection: (section: string) => void;
   scrollToSection: (sectionId: string) => void;
+  isLastSectionFullyVisible: boolean;
+  setIsLastSectionFullyVisible: (isVisible: boolean) => void;
 }
 
 export const useSectionStore = create<SectionStore>((set) => ({
@@ -17,4 +17,7 @@ export const useSectionStore = create<SectionStore>((set) => ({
       element.scrollIntoView({ behavior: "smooth" });
     }
   },
+  isLastSectionFullyVisible: false,
+  setIsLastSectionFullyVisible: (isVisible: boolean) =>
+    set({ isLastSectionFullyVisible: isVisible }),
 }));

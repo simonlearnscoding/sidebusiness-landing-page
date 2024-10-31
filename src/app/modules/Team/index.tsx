@@ -60,9 +60,7 @@ const TeamMembers = [
     role: "DEV",
     image: "/Team-simon.png",
     description: `
-We customize your website for optimal performance that goes beyond what a typical design agency can offer.
-No templates or pre-built solutions – instead, a proper tailor-made website that will help you achieve business needs and success.  <br /><br />
-From complex features to integrated third-party systems, we deliver a smooth user experience that keeps customers on your site, creating more conversion opportunities.
+We customize your website for optimal performance that goes beyond a typical design agency can offer. No templates or pre-built solution but instead a proper tailor-made website that will help you achieve business needs and success. From complex features to integrated third-party systems that’s a smooth user experience that will have more customers staying in your website creating more conversion opportunities.
     `,
   },
   {
@@ -70,8 +68,7 @@ From complex features to integrated third-party systems, we deliver a smooth use
     role: "DESIGN",
     image: "/Team-miracle.png",
     description: `
-I help you stay in touch with your users' expectations of your product.<br /><br />
-By delivering user-centric solutions, I explore what your users want and need, creating designs that are not only beautiful but also meaningful and pleasant to interact with.
+I will help you stay in touch with your users expectations of your product. I deliver user-centric solutions by exploring what your users want and need, I create designs that are not only beautiful to look at, but also meaningful and pleasant to interact with. 
     `,
   },
   {
@@ -80,9 +77,7 @@ By delivering user-centric solutions, I explore what your users want and need, c
     image: "/Team-james.png",
 
     description: `
-We here at _(insert company name) create intelligent websites that are visible to the world.
-This is done by creating a website with organic traffic and search engine ranking so people can actually find it.<br /><br />
-A competitor analysis will be done, and your SEO campaign will be monitored, ensuring the website we create is competitive in its presentation with the most optimized keywords and Google Analytics.
+“We here at _(insert company name) create intelligent websites that aren’t hiding from the world to see. This is done by creating a website that will have organic traffic and search engine ranking so people will can actually find it. A competitor analysis will be done and your SEO campaign will be monitored so the website we create will be competitive in it’s presentation using the most optimized keywords and Google Analytics. 
     `,
   },
 ];

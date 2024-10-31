@@ -1,9 +1,11 @@
-// hooks/useSectionObserver.ts
 import { useEffect } from "react";
 import { useSectionStore } from "@/store/useSectionStore";
 
-export const useSectionObserver = (sectionIds: string[]) => {
+const useSectionObserver = (sectionIds: string[]) => {
   const setActiveSection = useSectionStore((state) => state.setActiveSection);
+  const setIsLastSectionFullyVisible = useSectionStore(
+    (state) => state.setIsLastSectionFullyVisible,
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -11,12 +13,17 @@ export const useSectionObserver = (sectionIds: string[]) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
+
+            // Check if the last section is fully visible
+            if (entry.target.id === sectionIds[sectionIds.length - 1]) {
+              setIsLastSectionFullyVisible(entry.intersectionRatio === 1);
+            }
           }
         });
       },
       {
         root: null,
-        threshold: 0.5, // Adjust the threshold as needed
+        threshold: 1, // Full visibility threshold for last section
       },
     );
 
@@ -35,5 +42,7 @@ export const useSectionObserver = (sectionIds: string[]) => {
         }
       });
     };
-  }, [sectionIds, setActiveSection]);
+  }, [sectionIds, setActiveSection, setIsLastSectionFullyVisible]);
 };
+
+export default useSectionObserver;
