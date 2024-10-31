@@ -4,9 +4,9 @@
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import Navbar from "./components/Navbar";
 // import ContactFormSection from "./modules/ContactForm";
-import HeaderSection from "./modules/Header";
+// import HeaderSection from "./modules/Header";
 import MobileCTA from "./components/MobileCTA";
-import Comet from "./components/Comet";
+// import Comet from "./components/Comet";
 // import { useSectionObserver } from "@/hooks/useSectionObserver";
 import MeetTheTeam from "./modules/Team";
 import OurServicesSection from "./modules/OurServices";
