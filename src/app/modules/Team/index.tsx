@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const TextArea = () => {
   return (
-    <div className="bg-white flex w-full ">
+    <div className="bg-white flex  w-full ">
       <div className="  flex-1 flex p-screen py-16  flex-col max-w-3xl">
         <h1 className=" text-zinc-600 font-bebas">MEET THE TEAM</h1>
-        <p className="text-zinc-800">
+        <p className="text-zinc-800  ">
           Lorem ipsum dolor sit amet consectetur. Condimentum congue penatibus
           fusce imperdiet quam ut. Amet tempor enim ultrices magna porttitor
           urna. A quisque et etiam morbi lectus eros sed diam quis. Integer
@@ -46,7 +46,7 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
             {data.name}
           </div>
           <p
-            className="font-sans text-base text-white transition-all leading-5 duration-500 ease-in-out"
+            className="font-sans text-xl text-white transition-all  duration-500 ease-in-out"
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
         </div>
@@ -77,7 +77,7 @@ I will help you stay in touch with your users expectations of your product. I de
     image: "/Team-james.png",
 
     description: `
-We here at _(insert company name) create intelligent websites that aren’t hiding from the world to see. This is done by creating a website that will have organic traffic and search engine ranking so people will can actually find it. A competitor analysis will be done and your SEO campaign will be monitored so the website we create will be competitive in it’s presentation using the most optimized keywords and Google Analytics. 
+“We here at _(insert company name) create intelligent websites that aren’t hiding from the world to see. This is done by creating a website that will have organic traffic and search engine ranking so people will can actually find it. A competitor analysis will be done and your SEO campaign will be monitored so the website we create will be competitive in it’s presentation using the most optimized keywords and Google Analytics. 
     `,
   },
 ];
