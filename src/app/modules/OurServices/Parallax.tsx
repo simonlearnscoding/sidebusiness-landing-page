@@ -2,7 +2,9 @@ import useSectionOnScroll from "@/hooks/useSectionOnScroll";
 import useSectionObserver from "@/hooks/useSectionObserver";
 import { ReactNode } from "react";
 import Image from "next/image";
+import useScrollSnap from "react-use-scroll-snap";
 
+import { useRef } from "react";
 const Section = ({
   section,
   children,
@@ -31,11 +33,13 @@ function Container({ children, bgColor }) {
   );
 }
 export default function ParallaxComponent() {
-  useSectionOnScroll();
-  useSectionObserver(sectionIds);
-
+  // useSectionOnScroll();
+  // useSectionObserver(sectionIds);
+  const scrollRef = useRef(null);
+  //
+  useScrollSnap({ ref: scrollRef, duration: 50 });
   return (
-    <div className=" z-0">
+    <div ref={scrollRef} className=" z-0">
       <Section section="first">
         <Container bgColor="white">
           <div className="flex  h-full flex-col">
