@@ -1,5 +1,9 @@
-import useSectionOnScroll from "@/hooks/useSectionOnScroll";
-import useSectionObserver from "@/hooks/useSectionObserver";
+{
+  /* import useSectionOnScroll from "@/hooks/useSectionOnScroll"; */
+}
+{
+  /* import useSectionObserver from "@/hooks/useSectionObserver"; */
+}
 import { ReactNode } from "react";
 import Image from "next/image";
 import useScrollSnap from "react-use-scroll-snap";
@@ -19,7 +23,9 @@ const Section = ({
   );
 };
 
-const sectionIds = ["first", "second"]; // IDs of all sections
+{
+  /* const sectionIds = ["first", "second"]; // IDs of all sections */
+}
 
 function Container({ children, bgColor }) {
   return (

@@ -2,7 +2,7 @@
 // app/page.tsx
 "use client";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 // import ContactFormSection from "./modules/ContactForm";
 // import HeaderSection from "./modules/Header";
 import MobileCTA from "./components/MobileCTA";

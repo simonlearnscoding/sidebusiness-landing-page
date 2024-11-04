@@ -95,10 +95,10 @@ const TeamArea = () => {
 
 const MeetTheTeam = ({ id }: { id: string }) => {
   return (
-    <div className="  flex flex-col flex-1    w-screen ">
+    <section id={id} className="  flex flex-col flex-1    w-screen ">
       <TextArea />
       <TeamArea />
-    </div>
+    </section>
   );
 };
 
