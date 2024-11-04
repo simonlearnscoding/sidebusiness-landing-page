@@ -11,7 +11,7 @@ const Section = ({
   children: ReactNode;
 }) => {
   return (
-    <div id={section} className="h-screen  flex items-center justify-center">
+    <div id={section} className="h-full flex  items-center justify-center">
       {children}
     </div>
   );
@@ -21,8 +21,10 @@ const sectionIds = ["first", "second"]; // IDs of all sections
 
 function Container({ children, bgColor }) {
   return (
-    <div className="h-full flex px-16 pt-24 pb-12 w-full">
-      <div className={`h-full w-full bg-${bgColor} px-14 pt-12  rounded-xl`}>
+    <div className="h-screen flex px-3 sm:px-10 pt-10 md:pt-24 pb-12  w-full">
+      <div
+        className={`h-full w-full bg-${bgColor} sm:px-8 px-4 sm:pt-12 pt-14  rounded-md sm:rounded-xl`}
+      >
         {children}
       </div>
     </div>
@@ -33,24 +35,24 @@ export default function ParallaxComponent() {
   useSectionObserver(sectionIds);
 
   return (
-    <div className="min-h-screen">
+    <div className=" z-0">
       <Section section="first">
         <Container bgColor="white">
-          <div className="flex flex-col">
-            <h1 className="text-zinc-500 w-11/12 text-[200px]">
+          <div className="flex  h-full flex-col">
+            <h1 className="text-zinc-500 lg:w-11/12 text-8xl md:text-9xl xl:text-[170px]">
               WE ARE Uniting <span className="text-primary-500">BRANDS</span>{" "}
               with their <span className="text-primary-500">VISION</span>
             </h1>
-            <div className="font-sans text-zinc-700 max-w-md mt-10  text-xl">
-              These ideas are what have made the beautiful world we have today.
-            </div>
 
-            <div className="flex justify-start mt-10">
-              <div className="bg-primary-500 text-xl font-sans text-white py-4 px-5">
-                START YOUR JOURNEY
+            <div className="mt-auto mb-8 flex flex-col gap-3">
+              <div className="sm:flex hidden justify-start ">
+                <div className="bg-primary-500 text-xl font-sans text-white py-4 px-5">
+                  START YOUR JOURNEY
+                </div>
               </div>
             </div>
-            <div className="absolute w-96 right-80 h-96 bottom-0">
+
+            <div className="absolute z-10 w-96 right-60 h-96 bottom-0">
               <Image src="/HandArrow.svg" fill alt="Hand Arrow" />
             </div>
           </div>
@@ -58,7 +60,7 @@ export default function ParallaxComponent() {
       </Section>
       <Section section="second">
         <Container bgColor="primary-500">
-          <h1 className="w-8/12">
+          <h1 className="xl:w-8/12">
             Everything we see, experience, and benefit today is with thought the
             power of ideas.{" "}
           </h1>

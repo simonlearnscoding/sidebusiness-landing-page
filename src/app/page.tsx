@@ -20,8 +20,8 @@ export default function Home() {
 
   // return <ParallaxComponent />;
   return (
-    <div className="overflow-x-hidden bg-zinc-900">
-      <Navbar />
+    <div className="overflow-x-hidden relative bg-zinc-900">
+      {/* <Navbar /> */}
       <MobileCTA />
       <ParallaxComponent />
       {/* <HeaderSection id="header" /> */}

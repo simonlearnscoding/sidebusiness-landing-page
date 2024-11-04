@@ -10,7 +10,7 @@ const Navbar = () => {
   // const activeSection = useSectionStore((state) => state.activeSection);
   const scrollToSection = useSectionStore((state) => state.scrollToSection);
   return (
-    <div className="flex top-6 sm:top-10 px-3 sm:px-10 z-50  sticky w-full">
+    <div className=" sticky    sm:top-8 px-3 sm:px-10 z-50 bg-red-300    h-fit w-full">
       {/* LOGO */}
       <div className="font-sans text-xl w-full h-full font-normal text-zinc-50">
         LOGO
@@ -24,7 +24,7 @@ const Navbar = () => {
       {/* DESKTOP MENU */}
       <div
         onClick={() => scrollToSection("contact")}
-        className="flex-grow cursor-pointer z-50 hidden bg-zinc-900 sm:flex  border-solid border-[2px] py-4 px-5 rounded-sm border-zinc-100 items-center gap-4 text-zinc-100 ml-auto"
+        className="flex-grow cursor-pointer z-50 hidden bg-zinc-900 sm:flex  border-solid border-[2px] py-3 px-5 rounded-sm border-zinc-100 items-center gap-4 text-zinc-100 ml-auto"
       >
         <Globe size={24} />
         <div
