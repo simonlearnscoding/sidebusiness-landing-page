@@ -2,7 +2,7 @@
 // app/page.tsx
 "use client";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 // import ContactFormSection from "./modules/ContactForm";
 // import HeaderSection from "./modules/Header";
 import MobileCTA from "./components/MobileCTA";
@@ -20,14 +20,14 @@ export default function Home() {
 
   // return <ParallaxComponent />;
   return (
-    <div className="overflow-x-hidden relative bg-zinc-900">
-      {/* <Navbar /> */}
+    <div className=" relative bg-zinc-900">
+      <Navbar />
       <MobileCTA />
       <ParallaxComponent />
       {/* <HeaderSection id="header" /> */}
       <MeetTheTeam id="team" />
 
-      <OurServicesSection id="services" />
+      {/* <OurServicesSection id="services" /> */}
 
       <LetsChat id="contact" />
       {/* <ContactFormSection id="contact" /> */}
