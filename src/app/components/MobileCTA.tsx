@@ -6,11 +6,11 @@ const bebasNeue = Bebas_Neue({
 });
 
 const MobileCTA = ({}) => {
-  const goToSection = useSectionStore((state) => state.scrollToSection);
+  const scrollToSection = useSectionStore((state) => state.scrollToSection);
   const activeSection = useSectionStore((state) => state.activeSection);
   const handleClick = () => {
     if (activeSection === "header") {
-      goToSection("contact");
+      scrollToSection("contact");
     } else if (activeSection === "contact") {
       console.log("send form");
     }

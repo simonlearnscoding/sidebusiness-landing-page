@@ -4,6 +4,7 @@ import { useSectionStore } from "@/store/useSectionStore";
 // import ParallaxComponent from "./Parallax.tsx";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const HeaderSection = () => {
   return (
@@ -98,22 +99,65 @@ const OurServicesSection = ({ id }: { id: string }) => {
 
   // return <ParallaxComponent />;
   return (
-    <section id={id}>
-      <div className="flex flex-col max-h-screen w-screen">
-        <HeaderSection />
-        {services.map((service, index) => (
-          <ServicesSection
-            key={service.title}
-            title={service.title}
-            services={service.services}
-            serviceNumber={index + 1}
-            isHovered={hoveredSection === index}
-            setIsHovered={(hover) => setHoveredSection(hover ? index : null)}
-          />
-        ))}
-      </div>
-    </section>
+    <Parallax pages={3}>
+      <ParallaxLayer sticky={{ start: 2, end: 3 }} offset={0.7} speed={0.5}>
+        <div
+          className="w-full h-20 bg-red-300 relative"
+          style={{ top: "66vh" }}
+        >
+          {/* Adjust top to control initial position */}
+        </div>
+      </ParallaxLayer>
+    </Parallax>
   );
+  {
+    /* return ( */
+  }
+  {
+    /*   <section id={id}> */
+  }
+  {
+    /*     <div className="flex flex-col max-h-screen w-screen"> */
+  }
+  {
+    /*       <HeaderSection /> */
+  }
+  {
+    /*       {services.map((service, index) => ( */
+  }
+  {
+    /*         <ServicesSection */
+  }
+  {
+    /*           key={service.title} */
+  }
+  {
+    /*           title={service.title} */
+  }
+  {
+    /*           services={service.services} */
+  }
+  {
+    /*           serviceNumber={index + 1} */
+  }
+  {
+    /*           isHovered={hoveredSection === index} */
+  }
+  {
+    /*           setIsHovered={(hover) => setHoveredSection(hover ? index : null)} */
+  }
+  {
+    /*         /> */
+  }
+  {
+    /*       ))} */
+  }
+  {
+    /*     </div> */
+  }
+  {
+    /* ); */
+  }
 };
 
 export default OurServicesSection;

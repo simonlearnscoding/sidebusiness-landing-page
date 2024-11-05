@@ -1,6 +1,5 @@
-{
-  /* import useSectionOnScroll from "@/hooks/useSectionOnScroll"; */
-}
+import { useSectionStore } from "@/store/useSectionStore";
+/* import useSectionOnScroll from "@/hooks/useSectionOnScroll"; */
 {
   /* import useSectionObserver from "@/hooks/useSectionObserver"; */
 }
@@ -41,6 +40,7 @@ function Container({ children, bgColor }) {
 export default function ParallaxComponent() {
   // useSectionOnScroll();
   // useSectionObserver(sectionIds);
+  const scrollToSection = useSectionStore((state) => state.scrollToSection);
   const scrollRef = useRef(null);
   //
   useScrollSnap({ ref: scrollRef, duration: 50 });
@@ -48,7 +48,7 @@ export default function ParallaxComponent() {
     <div ref={scrollRef} className=" z-0">
       <Section section="first">
         <Container bgColor="white">
-          <div className="flex  h-full flex-col">
+          <div className="flex relative  h-full flex-col">
             <h1 className="text-zinc-500 lg:w-11/12 text-8xl md:text-9xl xl:text-[170px]">
               WE ARE Uniting <span className="text-primary-500">BRANDS</span>{" "}
               with their <span className="text-primary-500">VISION</span>
@@ -56,13 +56,16 @@ export default function ParallaxComponent() {
 
             <div className="mt-auto mb-8 flex flex-col gap-3">
               <div className="sm:flex hidden justify-start ">
-                <div className="bg-primary-500 text-xl font-sans text-white py-4 px-5">
+                <div
+                  onClick={() => scrollToSection("contact")}
+                  className="bg-primary-500 cursor-pointer text-xl font-sans text-white py-4 px-5"
+                >
                   START YOUR JOURNEY
                 </div>
               </div>
             </div>
 
-            <div className="absolute z-10 w-96 right-60 h-96 bottom-0">
+            <div className="absolute z-10 lg:w-96 w-72 h-72 right-0 lg:right-60 lg:h-96 bottom-10 lg:bottom-0">
               <Image src="/HandArrow.svg" fill alt="Hand Arrow" />
             </div>
           </div>
