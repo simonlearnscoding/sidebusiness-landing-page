@@ -1,5 +1,5 @@
 import TeamMember from "./TeamMember";
-import useScrollSnap from "react-use-scroll-snap";
+// import useScrollSnap from "react-use-scroll-snap";
 import { useRef } from "react";
 import TeamMembersData from "./data";
 
@@ -7,7 +7,7 @@ const TeamArea = () => {
   const scrollRef = useRef(null);
 
   // Initialize the scroll snap with the ref and a duration
-  useScrollSnap({ ref: scrollRef, duration: 50 });
+  // useScrollSnap({ ref: scrollRef, duration: 50 });
 
   return (
     <div

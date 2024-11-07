@@ -5,7 +5,7 @@ import { useSectionStore } from "@/store/useSectionStore";
 }
 import { ReactNode } from "react";
 import Image from "next/image";
-import useScrollSnap from "react-use-scroll-snap";
+// import useScrollSnap from "react-use-scroll-snap";
 
 import { useRef } from "react";
 const Section = ({
@@ -43,7 +43,7 @@ export default function ParallaxComponent() {
   const scrollToSection = useSectionStore((state) => state.scrollToSection);
   const scrollRef = useRef(null);
   //
-  useScrollSnap({ ref: scrollRef, duration: 50 });
+  // useScrollSnap({ ref: scrollRef, duration: 50  });
   return (
     <div ref={scrollRef} className=" z-0">
       <Section section="first">
@@ -73,10 +73,10 @@ export default function ParallaxComponent() {
       </Section>
       <Section section="second">
         <Container bgColor="primary-500">
-          <h1 className="xl:w-8/12">
+          <h2 className="lg:w-11/12">
             Everything we see, experience, and benefit today is with thought the
             power of ideas.{" "}
-          </h1>
+          </h2>
         </Container>
       </Section>
       <div className="h-full bg-black w-full"> </div>

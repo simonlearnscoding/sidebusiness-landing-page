@@ -7,7 +7,7 @@ type MemberProps = {
 import Image from "next/image";
 const TeamMember = ({ data }: { data: MemberProps }) => {
   return (
-    <div className="flex group flex-col p-[1px] bg-zinc-300 hover:bg-gradient-to-b hover:from-zinc-300/80 hover:to-primary-500 rounded-3xl relative flex-1 items-center h-[580px] w-[340px] sm:w-full">
+    <div className="flex group flex-col p-[1px] bg-zinc-300 hover:bg-gradient-to-b my-5 hover:from-zinc-300/80 hover:to-primary-500 rounded-3xl relative flex-1 items-center h-[480px] min-w-[340px] sm:w-full">
       {/* Image Wrapper */}
       <div className="relative h-full w-full rounded-3xl">
         <Image
