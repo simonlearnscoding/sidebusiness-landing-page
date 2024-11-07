@@ -24,11 +24,11 @@ const LetsChat = ({ id }: { id: string }) => {
             </h2>
 
             <h1 className="sm:mb-10  text-5xl font-bebas  text-zinc-950">
-              Let&apos;s HAVE A CHAT
+              Lets HAVE A CHAT
             </h1>
             <p className="text-lg mt-4">
               {" "}
-              We're open for business and collaboration{" "}
+              Were open for business and collaboration{" "}
             </p>
             <div className="mt-2 block sm:hidden bg-indigo-200 flex-1 max-h-80 rounded-md">
               {" "}

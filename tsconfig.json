@@ -4,6 +4,8 @@
     "allowJs": true,
     "skipLibCheck": true,
     "noUnusedParameters": false,
+    "noUnusedLocals": false,
+
     "strict": true,
     "noImplicitAny": false,
     "noEmit": true,
