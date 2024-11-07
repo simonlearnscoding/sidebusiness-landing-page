@@ -9,7 +9,7 @@ const LetsChat = ({ id }: { id: string }) => {
           <Image fill src={"/meet-the-team.png"} alt={"svg"} />
         </div>
 
-        <div className="absolute z-10 bottom-12 left-1/2 translate-x-44 h-96 w-96">
+        <div className="absolute z-10 bottom-20  left-1/2 translate-x-10 sm:translate-x-44 sm:h-96 h-36 w-36 sm:w-96">
           <Image fill src={"/Arrow.svg"} alt={"svg"} />
         </div>
 
