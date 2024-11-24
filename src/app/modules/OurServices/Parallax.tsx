@@ -47,11 +47,10 @@ export default function ParallaxComponent() {
   return (
     <div ref={scrollRef} className=" z-0">
       <Section section="first">
-        <Container bgColor="white">
+        <Container bgColor="">
           <div className="flex relative  h-full flex-col">
             <h1 className="text-zinc-500 lg:w-11/12 text-8xl md:text-9xl xl:text-[170px]">
-              WE ARE Uniting <span className="text-primary-500">BRANDS</span>{" "}
-              with their <span className="text-primary-500">VISION</span>
+              Your Vision, Our Mission
             </h1>
 
             <div className="mt-auto mb-8 flex flex-col gap-3">

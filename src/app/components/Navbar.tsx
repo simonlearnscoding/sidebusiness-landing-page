@@ -10,7 +10,7 @@ const bebasNeue = Bebas_Neue({
 const Navbar = () => {
   const scrollToSection = useSectionStore((state) => state.scrollToSection);
   return (
-    <div className="sticky flex top-4 items-center px-3 sm:px-10  z-50  h-fit w-full">
+    <div className="sticky flex top-4 items-center px-4 sm:px-10  z-50  h-fit w-full">
       {/* LOGO */}
       <div className="font-sans text-xl w-full h-full font-normal text-zinc-50">
         LOGO
