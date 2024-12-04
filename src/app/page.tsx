@@ -1,4 +1,5 @@
 "use client";
+import Marquee from "react-fast-marquee";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import Navbar from "./components/Navbar";
 import { Code, ArrowRight, TrendUp, PenNib } from "@phosphor-icons/react";
@@ -29,17 +30,56 @@ export default function Home() {
       <BookAnAppointment />
       {/* <ParallaxComponent /> */}
       {/* <HeaderSection id="header" /> */}
-      {/* <MeetTheTeam id="team" /> */}
+      <MeetTheTeam id="team" />
 
       {/* <OurServicesSection id="services" /> */}
 
       {/* <LetsChat id="contact" /> */}
       {/* <ContactFormSection id="contact" /> */}
       {/* <Comet /> */}
+      <ContactUs />
     </div>
   );
 }
 
+function ContactUs() {
+  return (
+    <div className="min-h-screen flex  flex-col h-screen ">
+      <Marquee
+        autoFill={true}
+        speed={120}
+        className="overflow-hidden"
+        gradient={false}
+      >
+        <div className="font-bebas  flex py-3 bg-zinc-400  items-center ">
+          <div className=" text-base font-sans text-zinc-900">
+            LETS WORK TOGETHER
+          </div>
+
+          <div className="w-1 h-1 mx-4 rounded-full bg-zinc-200"> </div>
+        </div>
+      </Marquee>
+      <div className="flex md:items-center  px-4 md:px-0  items-start justify-start flex-col md:justify-center flex-1 ">
+        <h2 className="md:text-center mt-20  md:mt-0 text-start max-w-2xl">
+          DONT LET YOUR WEBSITE BECOME A WHAT IF
+        </h2>
+        <div className="md:hidden w-full h-64 mt-14 rounded-xl bg-gray-300">
+          {" "}
+        </div>
+
+        <div className="w-full flex  px-4 lg:px-0   flex-col items-center mt-14 justify-center  ">
+          <div className=" lg:text-5xl text-3xl font-sans lg:max-w-5xl  bg-zinc-100 text-center w-full text-zinc-700  py-2 lg:py-5">
+            Book A Call
+          </div>
+          <div className="font-sans lg:mt-5 mt-4 text-lg lg:text-2xl">
+            {" "}
+            **TWO SPOTS LEFT**{" "}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 function Header() {
   return (
     <div className="flex  flex-col gap-10 lg:gap-2 h-fit mx-4 lg:mx-20 mt-28">
@@ -127,7 +167,7 @@ function Service({ Icon, name, bullets }) {
 }
 function BookAnAppointment() {
   return (
-    <div className="flex min-h-screen my-12 gap-12   lg:items-center lg:flex-row-reverse flex-col ">
+    <div className="flex min-h-screen h-screen my-12 gap-12    lg:items-center lg:flex-row-reverse flex-col ">
       <div className="bg-zinc-600 border-solid border-[2px] border-zinc-300 w-full h-96  lg:h-full">
         {" "}
       </div>
