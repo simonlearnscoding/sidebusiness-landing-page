@@ -115,7 +115,7 @@ function Explanation() {
           <p className="flex  font-sans   ">
             With an exceptional team of experts in website building, we will
             listen and implement every detail you have for your dream website.
-            We don't force a cookie-cutter one size fits all template that lacks
+            We dont force a cookie-cutter one size fits all template that lacks
             originality or any unique qualities that you get from Wix,
             Wordpress, and other page builders.
           </p>
@@ -123,7 +123,7 @@ function Explanation() {
 
           <p className="flex  font-sans   flex-col">
             You also won't be working alone, by yourself with an A.I. computer
-            giving you generic suggestions on what would "improve" your website.
+            giving you generic suggestions on what would improve your website.
             Instead you be a part of a team that's cares about your success, who
             will work together every step of the way that isn't there just to
             collect a subscription purchase.
