@@ -43,6 +43,6 @@ body {
     @apply font-bebas lg:text-8xl md:text-7xl sm:block  sm:text-7xl text-5xl;
   }
   p {
-    @apply sm:text-lg  text-2xl font-sans;
+    @apply text-2xl lg:text-3xl font-sans;
   }
 }
