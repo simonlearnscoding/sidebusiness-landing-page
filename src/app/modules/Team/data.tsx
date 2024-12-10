@@ -2,30 +2,30 @@ import { PenNib, Megaphone, Code } from "@phosphor-icons/react";
 
 const TeamMembersData = [
   {
-    name: "Simon",
-    role: "DEVELOPER",
-    image: "/Team-simon.png",
-    icon: Code,
+    name: "Miracle",
+    role: "DESIGN",
+    image: "/Miracle.jpg",
+    icon: PenNib,
     description: `
-We customize your website for optimal performance that goes beyond a typical design agency can offer. No templates or pre-built solution but instead a proper tailor-made website that will help you achieve business needs and success. From complex features to integrated third-party systems that’s a smooth user experience that will have more customers staying in your website creating more conversion opportunities.
+“I deliver user-centric solutions by exploring what your users wants and needs. This will result in a more attractive design for your clients. We designs I create are not only beautiful to look at but also meaningful to interact with”
     `,
   },
   {
-    name: "Miracle",
-    role: "DESIGN",
-    image: "/Team-miracle.png",
-    icon: PenNib,
+    name: "Simon",
+    role: "DEVELOPER",
+    image: "/Simon.jpg",
+    icon: Code,
     description: `
-I will help you stay in touch with your users expectations of your product. I deliver user-centric solutions by exploring what your users want and need, I create designs that are not only beautiful to look at, but also meaningful and pleasant to interact with. 
+“I will customize your website for optimal performance that goes beyond what a typical design agency can offer. I don’t use pre-built templates but instead proper tailor-made solutions that will help meet your business needs and goals. From complex features to integrated third-party systems we make websites you can be proud to show the world.”
     `,
   },
   {
     name: "James",
     role: "MARKETING",
-    image: "/Team-james.png",
+    image: "/James.jpg",
     icon: Megaphone,
     description: `
-“We here at _(insert company name) create intelligent websites that aren’t hiding from the world to see. This is done by creating a website that will have organic traffic and search engine ranking so people will can actually find it. A competitor analysis will be done and your SEO campaign will be monitored so the website we create will be competitive in it’s presentation using the most optimized keywords and Google Analytics. 
+“I believe the purpose of creating a websites is for the world to see. You may have a great website but if not one knows about it’s a big waste. That’s why I do everything to get your website a search engine ranking that your potential customers can find. I don’t just stop there but also offer both email and social media marketing as an addition to help increase brand awareness and client engagement to increase campaign performance.”
     `,
   },
 ];
