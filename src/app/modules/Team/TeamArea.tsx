@@ -12,13 +12,13 @@ const TeamArea = () => {
   return (
     <div
       ref={scrollRef}
-      className="flex bg-zinc-300 overflow-x-scroll snap-x snap-mandatory sm:px-20 px-4 flex-1"
+      className="flex  overflow-x-scroll snap-x snap-mandatory  sm:px-20 px-4 flex-1"
     >
-      <div className="flex min-w-fit h-full items-center gap-3 md:gap-10">
+      <div className="flex  min-w-fit h-full  items-center gap-3 w-full  md:gap-4">
         {TeamMembersData.map((member) => (
           <div
             key={member.name}
-            className="snap-center min-w-[250px] md:min-w-0"
+            className="snap-center min-w-[250px] md:min-w-0 h-full md:w-full"
           >
             <TeamMember data={member} />
           </div>
