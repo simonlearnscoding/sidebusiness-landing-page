@@ -41,7 +41,7 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
             fill
             className="  object-cover z-0 rounded-3xl"
           />
-          <div className="flex  flex-col z-10 group-hover:z-0 justify-between h-full">
+          <div className="flex  flex-col z-10 justify-between h-full">
             <div className="flex">
               <h2 className="text-white text-4xl">{data.name}</h2>
               <div className="ml-auto">

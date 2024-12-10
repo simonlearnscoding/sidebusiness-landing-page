@@ -20,7 +20,7 @@ const TeamArea = () => {
             key={member.name}
             className="snap-center min-w-[250px] md:min-w-0 h-full md:w-full"
           >
-            <TeamMember data={member} />
+            <TeamMember key={member.name} data={member} />
           </div>
         ))}
       </div>
