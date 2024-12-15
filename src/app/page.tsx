@@ -5,41 +5,42 @@ import Navbar from "./components/Navbar";
 import { Code, ArrowRight, TrendUp, PenNib } from "@phosphor-icons/react";
 import MobileCTA from "./components/MobileCTA";
 import MeetTheTeam from "./modules/Team";
+import useSectionObserver from "@/hooks/useSectionObserver";
 
-const sections = ["About us", "Our Services", " Team", "Contact Us"];
 export default function Home() {
   useScrollAndMousePosition();
 
+  const sections = ["About Us", "Our Services", "Team", "Contact Us"];
   // List of section IDs
-  // useSectionObserver(["header", "contact", "comet"]);
+  useSectionObserver(sections);
 
   // return <ParallaxComponent />;
   return (
     <div className=" relative h-fit bg-zinc-900">
       <Navbar sections={sections} />
       <MobileCTA />
-      <Header id={"About Us"} />
+      <Header id={"Header"} />
       <SubHeader />
-      <Explanation />
-      <Services />
+      <Explanation id={sections[0]} />
+      <Services id={sections[1]} />
       <BookAnAppointment />
       {/* <ParallaxComponent /> */}
       {/* <HeaderSection id="header" /> */}
-      <MeetTheTeam id="team" />
+      <MeetTheTeam id="Team" />
 
       {/* <OurServicesSection id="services" /> */}
 
       {/* <LetsChat id="contact" /> */}
       {/* <ContactFormSection id="contact" /> */}
       {/* <Comet /> */}
-      <ContactUs />
+      <ContactUs id={"Contact Us"} />
     </div>
   );
 }
 
-function ContactUs() {
+function ContactUs({ id }) {
   return (
-    <div className="min-h-screen flex  flex-col h-screen ">
+    <section id={id} className="min-h-screen flex  flex-col h-screen ">
       <Marquee
         autoFill={true}
         speed={120}
@@ -72,9 +73,10 @@ function ContactUs() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
+
 function Header({ id }) {
   return (
     <section
@@ -102,9 +104,12 @@ function SubHeader() {
   );
 }
 
-function Explanation() {
+function Explanation({ id }) {
   return (
-    <div className="flex mx-4 lg:mx-20 min-h-screen  justify-center  flex-col mb-16 lg:mb-32">
+    <section
+      id={id}
+      className="flex mx-4 lg:mx-20 min-h-screen  justify-center  flex-col mb-16 lg:mb-32"
+    >
       <h2 className="flex  flex-col lg:w-8/12 mb-6 mt-4">
         we take the stress off of website building
       </h2>
@@ -141,7 +146,7 @@ function Explanation() {
           <div className="h-full w-[425px]  xl:mr-24 bg-gray-300"> </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -184,7 +189,7 @@ function BookAnAppointment() {
   );
 }
 
-function Services() {
+function Services({ id }) {
   const services = [
     {
       name: "Code",
@@ -227,7 +232,7 @@ function Services() {
     },
   ];
   return (
-    <div className="flex  border-solid min-h-screen  flex-col">
+    <section id={id} className="flex  border-solid min-h-screen  flex-col">
       <div className="py-4 px-4  bg-zinc-800 lg:px-20   border-solid border-[1px] border-white ">
         <h1 className=" w-full  ">OUR SERVICES</h1>
       </div>
@@ -241,6 +246,6 @@ function Services() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

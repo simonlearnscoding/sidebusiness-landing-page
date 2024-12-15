@@ -23,7 +23,7 @@ const useSectionObserver = (sectionIds: string[]) => {
       },
       {
         root: null,
-        threshold: 1, // Full visibility threshold for last section
+        threshold: 0.6, // Full visibility threshold for last section
       },
     );
 

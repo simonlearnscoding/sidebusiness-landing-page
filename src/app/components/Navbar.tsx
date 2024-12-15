@@ -1,11 +1,13 @@
 // Navbar Component
 import { Phone, List } from "@phosphor-icons/react/dist/ssr";
-import { Bebas_Neue } from "@next/font/google";
 import { useSectionStore } from "@/store/useSectionStore";
 
-const Button = ({ name }) => {
+const Button = ({ name, handleClick, active }) => {
   return (
-    <div className="font-sans flex transition-all hover:bg-zinc-100 px-4 py-2 rounded-md cursor-pointer text-xl  h-full font-normal text-zinc-900">
+    <div
+      onClick={handleClick}
+      className={`font-sans flex transition-all hover:bg-zinc-100 ${active ? "bg-zinc-100" : "bg-inherit"} px-4 py-2 rounded-md cursor-pointer text-xl  h-full font-normal text-zinc-900`}
+    >
       {name}
     </div>
   );
@@ -25,13 +27,19 @@ const CallCTA = ({ name }) => {
 
 const Navbar = ({ sections }) => {
   const scrollToSection = useSectionStore((state) => state.scrollToSection);
+  const activeSection = useSectionStore((state) => state.activeSection);
 
   return (
-    <div className="sticky flex justify-center   top-6 items-center px-4 sm:px-10  z-50  h-fit w-full">
+    <div className="sticky select-none flex justify-center   top-6 items-center px-4 sm:px-10  z-50  h-fit w-full">
       {/* LOGO */}
       <div className="font-sans flex gap-2   p-2 rounded-md   border-solid  border-gray-200 border-[1px]  bg-white text-xl  h-full font-normal text-zinc-50">
         {sections.map((section, index) => (
-          <Button key={section} name={section} />
+          <Button
+            active={activeSection === section}
+            handleClick={() => scrollToSection(section)}
+            key={section}
+            name={section}
+          />
         ))}
         <CallCTA name={"Book a call"} />
       </div>
