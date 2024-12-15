@@ -3,15 +3,10 @@ import Marquee from "react-fast-marquee";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import Navbar from "./components/Navbar";
 import { Code, ArrowRight, TrendUp, PenNib } from "@phosphor-icons/react";
-// import ContactFormSection from "./modules/ContactForm";
-// import HeaderSection from "./modules/Header";
 import MobileCTA from "./components/MobileCTA";
-// import Comet from "./components/Comet";
-// import { useSectionObserver } from "@/hooks/useSectionObserver";
 import MeetTheTeam from "./modules/Team";
-import OurServicesSection from "./modules/OurServices";
-import LetsChat from "./modules/LetsChat";
-import ParallaxComponent from "./modules/OurServices/Parallax";
+
+const sections = ["About us", "Our Services", " Team", "Contact Us"];
 export default function Home() {
   useScrollAndMousePosition();
 
@@ -21,9 +16,9 @@ export default function Home() {
   // return <ParallaxComponent />;
   return (
     <div className=" relative h-fit bg-zinc-900">
-      <Navbar />
+      <Navbar sections={sections} />
       <MobileCTA />
-      <Header />
+      <Header id={"About Us"} />
       <SubHeader />
       <Explanation />
       <Services />
@@ -80,9 +75,12 @@ function ContactUs() {
     </div>
   );
 }
-function Header() {
+function Header({ id }) {
   return (
-    <div className="flex  flex-col gap-10 lg:gap-2 h-fit mx-4 lg:mx-20 mt-28">
+    <section
+      id={id}
+      className="flex  flex-col gap-10 lg:gap-2 h-fit mx-4 lg:mx-20 mt-28"
+    >
       <h1 className="flex  flex-col">YOUR VISION, OUR MISSION</h1>
       <p className="flex md:text-3xl text-2xl font-sans  w-9/12 flex-col">
         At Zuesite We Make Your Vision Into Reality
@@ -90,7 +88,7 @@ function Header() {
       <button className="bg-white font-sans lg:mr-auto text-2xl lg:text-3xl lg:mt-24 text-black py-4 lg:py-5 px-5 lg:px-10">
         START YOUR JOURNEY
       </button>
-    </div>
+    </section>
   );
 }
 

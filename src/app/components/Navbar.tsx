@@ -1,19 +1,39 @@
 // Navbar Component
-import { Globe, ArrowRight, List } from "@phosphor-icons/react/dist/ssr";
+import { Phone, List } from "@phosphor-icons/react/dist/ssr";
 import { Bebas_Neue } from "@next/font/google";
 import { useSectionStore } from "@/store/useSectionStore";
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-});
 
-const Navbar = () => {
-  const scrollToSection = useSectionStore((state) => state.scrollToSection);
+const Button = ({ name }) => {
   return (
-    <div className="sticky flex top-4 items-center px-4 sm:px-10  z-50  h-fit w-full">
+    <div className="font-sans flex transition-all hover:bg-zinc-100 px-4 py-2 rounded-md cursor-pointer text-xl  h-full font-normal text-zinc-900">
+      {name}
+    </div>
+  );
+};
+
+const CallCTA = ({ name }) => {
+  return (
+    <div className="font-sans flex transition-all border-solid border-[2px] border-zinc-600 hover:bg-zinc-900 px-3 gap-1 py-2 rounded-md cursor-pointer bg-zinc-800 text-xl  h-full font-normal text-zinc-100">
+      <div className=" flex justify-center items-center ">
+        <Phone size={20} />
+      </div>
+
+      {name}
+    </div>
+  );
+};
+
+const Navbar = ({ sections }) => {
+  const scrollToSection = useSectionStore((state) => state.scrollToSection);
+
+  return (
+    <div className="sticky flex justify-center   top-6 items-center px-4 sm:px-10  z-50  h-fit w-full">
       {/* LOGO */}
-      <div className="font-sans text-xl w-full h-full font-normal text-zinc-50">
-        LOGO
+      <div className="font-sans flex gap-2   p-2 rounded-md   border-solid  border-gray-200 border-[1px]  bg-white text-xl  h-full font-normal text-zinc-50">
+        {sections.map((section, index) => (
+          <Button key={section} name={section} />
+        ))}
+        <CallCTA name={"Book a call"} />
       </div>
 
       {/* MOBILE HAMBURGER ICON */}
@@ -22,18 +42,18 @@ const Navbar = () => {
       </div>
 
       {/* DESKTOP MENU */}
-      <div
-        onClick={() => scrollToSection("contact")}
-        className="flex-grow cursor-pointer z-50 hidden bg-zinc-900 sm:flex border-solid border-[2px] py-3 px-5 rounded-sm border-zinc-100 items-center gap-4 text-zinc-100 ml-auto"
-      >
-        <Globe size={24} />
-        <div
-          className={`${bebasNeue.className} whitespace-nowrap font-sans text-2xl font-normal`}
-        >
-          START YOUR JOURNEY
-        </div>
-        <ArrowRight size={24} />
-      </div>
+      {/* <div */}
+      {/*   onClick={() => scrollToSection("contact")} */}
+      {/*   className="flex-grow cursor-pointer z-50 hidden bg-zinc-900 sm:flex border-solid border-[2px] py-3 px-5 rounded-sm border-zinc-100 items-center gap-4 text-zinc-100 ml-auto" */}
+      {/* > */}
+      {/*   <Globe size={24} /> */}
+      {/*   <div */}
+      {/*     className={`${bebasNeue.className} whitespace-nowrap font-sans text-2xl font-normal`} */}
+      {/*   > */}
+      {/*     START YOUR JOURNEY */}
+      {/*   </div> */}
+      {/*   <ArrowRight size={24} /> */}
+      {/* </div> */}
     </div>
   );
 };
