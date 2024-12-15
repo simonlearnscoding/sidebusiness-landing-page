@@ -81,7 +81,7 @@ function Header({ id }) {
   return (
     <section
       id={id}
-      className="flex  flex-col gap-10 lg:gap-2 h-fit mx-4 lg:mx-20 mt-28"
+      className="flex  flex-col gap-10 lg:gap-2 h-fit mx-4 lg:mx-20 pt-28"
     >
       <h1 className="flex  flex-col">YOUR VISION, OUR MISSION</h1>
       <p className="flex md:text-3xl text-2xl font-sans  w-9/12 flex-col">

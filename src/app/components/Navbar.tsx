@@ -30,7 +30,7 @@ const Navbar = ({ sections }) => {
   const activeSection = useSectionStore((state) => state.activeSection);
 
   return (
-    <div className="sticky select-none flex justify-center   top-6 items-center px-4 sm:px-10  z-50  h-fit w-full">
+    <div className="sticky select-none  justify-center   hidden md:flex md:top-6 items-center px-4 md:px-10  z-50  h-fit w-full">
       {/* LOGO */}
       <div className="font-sans flex gap-2   p-2 rounded-md   border-solid  border-gray-200 border-[1px]  bg-white text-xl  h-full font-normal text-zinc-50">
         {sections.map((section, index) => (
