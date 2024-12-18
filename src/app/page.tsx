@@ -83,7 +83,9 @@ function ContactUs() {
 function Header() {
   return (
     <div className="flex  flex-col gap-10 lg:gap-2 h-fit mx-4 lg:mx-20 mt-28">
-      <h1 className="flex  flex-col">YOUR VISION, OUR MISSION</h1>
+      <h1 className="flex  flex-col">
+        CREATING A WEBSITE - INTIMIDATING, DAUNTING? NOT ANYMORE.
+      </h1>
       <p className="flex md:text-3xl text-2xl font-sans  w-9/12 flex-col">
         At Zuesite We Make Your Vision Into Reality
       </p>
