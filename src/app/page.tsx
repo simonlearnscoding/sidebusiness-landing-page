@@ -2,7 +2,14 @@
 import Marquee from "react-fast-marquee";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import Navbar from "./components/Navbar";
-import { Code, ArrowRight, TrendUp, PenNib } from "@phosphor-icons/react";
+import {
+  Code,
+  ArrowRight,
+  TrendUp,
+  PenNib,
+  ShoppingCart,
+} from "@phosphor-icons/react";
+
 // import ContactFormSection from "./modules/ContactForm";
 // import HeaderSection from "./modules/Header";
 import MobileCTA from "./components/MobileCTA";
@@ -87,7 +94,7 @@ function Header() {
         CREATING A WEBSITE - INTIMIDATING, DAUNTING? NOT ANYMORE.
       </h1>
       <p className="flex md:text-3xl text-2xl font-sans  w-9/12 flex-col">
-        At Zuesite We Make Your Vision Into Reality
+        We believe that your business deserves more than just a website
       </p>
       <button className="bg-white font-sans lg:mr-auto text-2xl lg:text-3xl lg:mt-24 text-black py-4 lg:py-5 px-5 lg:px-10">
         START YOUR JOURNEY
@@ -173,7 +180,6 @@ function BookAnAppointment() {
       <div className="bg-zinc-600 border-solid border-[2px] border-zinc-300 w-full h-96  lg:h-full">
         {" "}
       </div>
-
       <div className="mx-4 lg:mx-20">
         <h2 className="flex mb-3   w-11/12 flex-col">
           Book an appointment for a free 45 min consultation call to discuss
@@ -194,12 +200,12 @@ function Services() {
       name: "Code",
       icon: Code,
       bullets: [
-        "Custom Websites",
-        "E-commerce",
-        "Blog",
-        "Portfolio",
-        "Landing Page",
-        "Web Application",
+        "Web Applications",
+        "Mobile Apps",
+        "AI Integration",
+        "Cloud Integration",
+        "CMS Integration",
+        "Custom Solutions",
       ],
     },
 
@@ -207,24 +213,35 @@ function Services() {
       name: "Design",
       icon: PenNib,
       bullets: [
-        "Custom Websites",
-        "E-commerce",
-        "Blog",
-        "Portfolio",
-        "Landing Page",
-        "Web Application",
+        "User Interface - UI",
+        "User Experience - UX",
+        "Custom Webdesign",
+        "Design Assets",
+        "MVP Prototypes",
+        "Design Audit",
       ],
     },
-
     {
       name: "Marketing",
 
       icon: TrendUp,
       bullets: [
-        "Custom Websites",
-        "E-commerce",
-        "Blog",
-        "Portfolio",
+        "SEO",
+        "Branding",
+        "Social Media Management",
+        "Email Marketing",
+        "Google Analytics",
+        "Conversion Ration Optimization",
+      ],
+    },
+    {
+      name: "E-commerce",
+      icon: ShoppingCart,
+      bullets: [
+        "Webflow",
+        "Wordpress",
+        "Shopify",
+        "Copywriting",
         "Landing Page",
         "Web Application",
       ],
@@ -236,7 +253,7 @@ function Services() {
         <h1 className=" w-full  ">OUR SERVICES</h1>
       </div>
 
-      <div className=" w-full px-4 flex flex-col  h-full lg:px-20 lg:flex-row gap-4 py-8 mt-4 lg:mt-20">
+      <div className=" w-full px-2 flex flex-col  h-full lg:px-20 lg:flex-row gap-2 py-8 mt-4 lg:mt-20">
         {services.map((service) => (
           <Service
             Icon={service.icon}
