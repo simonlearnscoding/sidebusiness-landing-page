@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const TeamMember = ({ data }: { data: MemberProps }) => {
   return (
-    <div className=" py-4 min-w-[340px] [perspective:1000px] sm:w-full h-full group">
+    <div className="py-4 min-w-[340px] flex-1 [perspective:1000px] sm:w-full h-full group">
       <div className="w-full h-full [backface-visibility:hidden] border-zinc-300 [transform-style:preserve-3d] transition-all duration-400 group-hover:[transform:rotateY(180deg)] border-solid border-[1px]  relative rounded-3xl">
         <Image
           src={data.image}

@@ -165,7 +165,7 @@ function Service({ Icon, name, bullets }) {
       </div>
       <ul className=" list-disc pl-8 mt-4 lg:mt-6">
         {bullets.map((bullet, index) => (
-          <li key={index} className="font-sans text-2xl">
+          <li key={index} className="font-sans text-white text-2xl">
             {" "}
             {bullet}{" "}
           </li>
@@ -231,7 +231,7 @@ function Services() {
         "Social Media Management",
         "Email Marketing",
         "Google Analytics",
-        "Conversion Ration Optimization",
+        "CRO",
       ],
     },
     {

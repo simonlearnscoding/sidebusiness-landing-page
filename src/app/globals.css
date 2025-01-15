@@ -36,13 +36,13 @@ body {
 
 @layer base {
   h1 {
-    @apply font-bebas lg:text-9xl md:text-8xl sm:block  text-6xl;
+    @apply text-white font-bebas lg:text-9xl md:text-8xl sm:block  text-6xl;
   }
 
   h2 {
-    @apply font-bebas lg:text-8xl md:text-7xl sm:block  sm:text-7xl text-5xl;
+    @apply font-bebas  text-white lg:text-8xl md:text-7xl sm:block  sm:text-7xl text-5xl;
   }
   p {
-    @apply text-2xl lg:text-3xl font-sans;
+    @apply text-2xl lg:text-3xl text-white font-sans;
   }
 }
