@@ -1,4 +1,3 @@
-import { text } from "stream/consumers";
 import { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
@@ -11,16 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        bebas: "var(--font-bebas-neue)",
-        sans: ["Bebas Neue", ...fontFamily.sans], // Add Bebas Neue to the default sans family
+        sans: ["GeneralSans", ...fontFamily.sans], // GeneralSans as default sans-serif
+        serife: ["Instrument Serif", ...fontFamily.serif], // Instrument Serif as serif
+        inter: ["Inter", ...fontFamily.sans], // Inter as custom font
       },
-
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-
         primary: {
-          500: "#6366F1",
+          500: "#44A5DD",
         },
         secondary: {
           500: "#E1E7D5",

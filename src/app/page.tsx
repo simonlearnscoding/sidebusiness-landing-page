@@ -1,5 +1,6 @@
 "use client";
 import Marquee from "react-fast-marquee";
+import Image from "next/image";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import Navbar from "./components/Navbar";
 import {
@@ -27,10 +28,10 @@ export default function Home() {
 
   // return <ParallaxComponent />;
   return (
-    <div className=" relative h-fit bg-zinc-900">
+    <div className=" relative h-fit bg-white">
       <Navbar />
-      <MobileCTA />
       <Header />
+      <MobileCTA />
       <SubHeader />
       <Explanation />
       <Services />
@@ -58,7 +59,7 @@ function ContactUs() {
         className="overflow-hidden"
         gradient={false}
       >
-        <div className="font-bebas  flex py-3 bg-zinc-400  items-center ">
+        <div className="font-sans  flex py-3 bg-zinc-400  items-center ">
           <div className=" text-base font-sans text-zinc-900">
             LETS WORK TOGETHER
           </div>
@@ -89,16 +90,16 @@ function ContactUs() {
 }
 function Header() {
   return (
-    <div className="flex  flex-col gap-10 lg:gap-2 h-fit mx-4 lg:mx-20 mt-28">
-      <h1 className="flex  flex-col">
-        CREATING A WEBSITE - INTIMIDATING, DAUNTING? NOT ANYMORE.
+    <div className="flex  text-center flex-col gap-4 lg:gap-2 h-fit mx-4 lg:mx-20 mt-24">
+      <h1 className="flex font-medium flex-col">
+        Creating a Website - Intimidating, Daunting?{" "}
+        <span className="font-serife font-normal italic text-primary-500 ">
+          Not Anymore.
+        </span>
       </h1>
-      <p className="flex md:text-3xl text-2xl font-sans  w-9/12 flex-col">
-        We believe that your business deserves more than just a website
+      <p className="flex  w-full md:text-3xl text-2xl font-sans   flex-col">
+        We craft beautiful websites that Convert and are Worth Visiting.
       </p>
-      <button className="bg-white font-sans lg:mr-auto text-2xl lg:text-3xl lg:mt-24 text-black py-4 lg:py-5 px-5 lg:px-10">
-        START YOUR JOURNEY
-      </button>
     </div>
   );
 }
@@ -106,8 +107,14 @@ function Header() {
 function SubHeader() {
   return (
     <div className=" w-full my-10  lg:my-36 h-fit">
-      <div className="mx-4 lg:mx-20 rounded-lg bg-gray-800 h-96 lg:h-[737px]">
-        {" "}
+      <div className="mx-4 lg:mx-20 relative rounded-lg bg-gray-400 h-96 lg:h-[737px] overflow-hidden">
+        <Image
+          src="/CITY LIGHT 1.jpg"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg scale-110"
+          alt="hero"
+        />
       </div>
     </div>
   );
