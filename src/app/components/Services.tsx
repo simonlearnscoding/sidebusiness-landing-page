@@ -34,7 +34,7 @@ export default function Services() {
       bullets: [
         "SEO",
         "Branding",
-        "Social Media Management",
+        "Social Media",
         "Email Marketing",
         "Google Analytics",
         "CRO",
@@ -54,20 +54,21 @@ export default function Services() {
     },
   ];
   return (
-    <div className="flex  mt-10   min-h-screen  flex-col">
-      <div className="mt-5 mx-4 ">
+    <div className="flex  mt-10   min-h-screen   flex-col">
+      <div className="mt-5 lg:mx-20 mx-4 ">
         <h1 className=" text-white text-center w-full  ">
           We Design, Build, And Brand it{" "}
           <span className="span pl-1">Seamlessly</span>
         </h1>
       </div>
 
-      <div className=" w-full px-4 flex flex-col  h-full lg:px-20 lg:flex-row gap-3  py-8 mt-4 lg:mt-20">
+      <div className="w-full  px-4 flex lg:px-20 gap-3 lg:gap-4 py-8 mt-4 lg:mt-24 overflow-x-auto whitespace-nowrap">
         {services.map((service) => (
           <Service
             Icon={service.icon}
             name={service.name}
             bullets={service.bullets}
+            key={service.name}
           />
         ))}
       </div>
@@ -77,7 +78,7 @@ export default function Services() {
 
 function Service({ Icon, name, bullets }) {
   return (
-    <div className=" p-5  flex  lg:flex-1 h-full   rounded-3xl border-solid border-[2px]  border-white   flex-col">
+    <div className=" p-5 lg:p-14  flex  lg:flex-1 h-full   bg-gray-900 rounded-3xl border-solid border-[2px]  border-gray-900 hover:border-white   flex-col">
       <div className="flex text-white flex-col  items-start gap-8 lg:gap-6 ">
         <Icon size={32} />
         <div className=" font-sans font-medium text-4xl text-white ">
