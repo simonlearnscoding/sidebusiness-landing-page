@@ -1,5 +1,5 @@
 // Navbar Component
-import { Globe, ArrowRight, List } from "@phosphor-icons/react/dist/ssr";
+import { List } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import { useSectionStore } from "@/store/useSectionStore";
 
