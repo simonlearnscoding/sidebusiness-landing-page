@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
@@ -9,6 +8,7 @@ import Header from "./components/Header";
 import BookAnAppointment from "./components/BookAnAppointment";
 import Services from "./components/Services";
 import WorkingWithUs from "./components/WorkingWithUs";
+import SubHeader from "./components/SubHeader";
 import FAQ from "./components/FAQ";
 
 import MobileCTA from "./components/MobileCTA";
@@ -48,22 +48,6 @@ export default function Home() {
       {/* <Comet /> */}
       <ContactUs />
       <Footer />
-    </div>
-  );
-}
-
-function SubHeader() {
-  return (
-    <div className=" w-full my-10  lg:my-36 h-fit">
-      <div className="mx-4 lg:mx-20 relative rounded-lg bg-gray-400 h-96 lg:h-[737px] overflow-hidden">
-        <Image
-          src="/CITY LIGHT 1.jpg"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg scale-110"
-          alt="hero"
-        />
-      </div>
     </div>
   );
 }
