@@ -3,23 +3,14 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import useScrollAndMousePosition from "@/hooks/useScrollAndMousePos";
 import Navbar from "./components/Navbar";
-import {
-  Code,
-  ArrowRight,
-  TrendUp,
-  PenNib,
-  ShoppingCart,
-} from "@phosphor-icons/react";
+import { Code, TrendUp, PenNib, ShoppingCart } from "@phosphor-icons/react";
+import Header from "./components/Header";
 
-// import ContactFormSection from "./modules/ContactForm";
-// import HeaderSection from "./modules/Header";
 import MobileCTA from "./components/MobileCTA";
-// import Comet from "./components/Comet";
-// import { useSectionObserver } from "@/hooks/useSectionObserver";
 import MeetTheTeam from "./modules/Team";
-import OurServicesSection from "./modules/OurServices";
-import LetsChat from "./modules/LetsChat";
-import ParallaxComponent from "./modules/OurServices/Parallax";
+// import OurServicesSection from "./modules/OurServices";
+// import LetsChat from "./modules/LetsChat";
+// import ParallaxComponent from "./modules/OurServices/Parallax";
 export default function Home() {
   useScrollAndMousePosition();
 
@@ -33,7 +24,7 @@ export default function Home() {
       <Header />
       <MobileCTA />
       <SubHeader />
-      <Explanation />
+      <WorkingWithUs />
       <Services />
       <BookAnAppointment />
       {/* <ParallaxComponent /> */}
@@ -88,21 +79,6 @@ function ContactUs() {
     </div>
   );
 }
-function Header() {
-  return (
-    <div className="flex  text-center flex-col gap-4 lg:gap-2 h-fit mx-4 lg:mx-20 mt-24">
-      <h1 className="flex font-medium flex-col">
-        Creating a Website - Intimidating, Daunting?{" "}
-        <span className="font-serife font-normal italic text-primary-500 ">
-          Not Anymore.
-        </span>
-      </h1>
-      <p className="flex  w-full md:text-3xl text-2xl font-sans   flex-col">
-        We craft beautiful websites that Convert and are Worth Visiting.
-      </p>
-    </div>
-  );
-}
 
 function SubHeader() {
   return (
@@ -119,46 +95,13 @@ function SubHeader() {
     </div>
   );
 }
-
-function Explanation() {
+function WorkingWithUs() {
   return (
-    <div className="flex mx-4 lg:mx-20 min-h-screen  justify-center  flex-col mb-16 lg:mb-32">
-      <h2 className="flex  flex-col lg:w-8/12 mb-6 mt-4">
-        we take the stress off of website building
-      </h2>
-      <div className="flex">
-        <div className="flex gap-10 lg:gap-0  flex-1 flex-col">
-          <p className="flex  font-sans   ">
-            With an exceptional team of experts in website building, we will
-            listen and implement every detail you have for your dream website.
-            We dont force a cookie-cutter one size fits all template that lacks
-            originality or any unique qualities that you get from Wix,
-            Wordpress, and other page builders.
-          </p>
-          <div className="bg-gray-400 h-[297px] lg:hidden w-full"> </div>
-
-          <p className="flex  font-sans   flex-col">
-            You also won't be working alone, by yourself with an A.I. computer
-            giving you generic suggestions on what would improve your website.
-            Instead you be a part of a team that's cares about your success, who
-            will work together every step of the way that isn't there just to
-            collect a subscription purchase.
-          </p>
-          <div className="flex lg:gap-6 gap-1 lg:mt-16 mt-2 md:mt-6 mb-4 ">
-            <div className=" flex justify-center items-center bg-zinc-800 p-5 rounded-full border-solid border-white/5 border-[2px]">
-              <ArrowRight className="-rotate-45 lg:w-10 w-6 h-6 lg:h-10" />
-            </div>
-
-            <div className="font-sans lg:text-4xl  text-2xl md:text-3xl my-auto ml-4 text-white">
-              {" "}
-              LETS PUT YOUR BUSINESS ON THE MAP{" "}
-            </div>
-          </div>
-        </div>
-        <div className="justify-end items-center  hidden xl:flex flex-1  h-fill">
-          <div className="h-full w-[425px]  xl:mr-24 bg-gray-300"> </div>
-        </div>
-      </div>
+    <div className="flex flex-col justify-center mx-4">
+      <h1 className=" text-center ">
+        Here's why you'll enjoy every step of the
+        <span className="pl-2 span">Journey With Us.</span>
+      </h1>
     </div>
   );
 }
