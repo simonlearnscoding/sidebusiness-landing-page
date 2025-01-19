@@ -14,35 +14,50 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
 
   const handleClick = () => {
     if (window.innerWidth <= 768) {
-      // Adjust breakpoint for mobile as needed
+      // Toggle flip for mobile
       setIsFlipped((prev) => !prev);
     }
   };
 
   return (
-    <div className="py-4 min-w-[340px] flex-1 [perspective:1000px] sm:w-full h-full group">
-      <div className="w-full h-full [backface-visibility:hidden] border-zinc-300 [transform-style:preserve-3d] transition-all duration-400 group-hover:[transform:rotateY(180deg)] border-solid border-[1px]  relative rounded-3xl">
-        <Image
-          src={data.image}
-          alt={data.name}
-          fill
-          className="object-cover rounded-3xl"
-        />
-        {/* Front side */}
-        <div className=" p-5  flex flex-col  w-full z-10 bg-zinc-800/30 rounded-3xl absolute h-full">
-          <div className="flex">
-            <h1 className="text-white text-4xl"> {data.name} </h1>
-            <div className="ml-auto">
-              <data.icon className="text-white w-8 h-8" />
-            </div>
-            <h2 className="mt-auto">{data.role}</h2>
+    <div
+      className="py-4 min-w-[340px] flex-1 [perspective:1000px] sm:w-full h-full group"
+      onClick={handleClick} // Click handling for mobile
+    >
+      <div
+        className={`relative w-full h-full [transform-style:preserve-3d] transition-transform duration-300 ease-out ${
+          isFlipped ? "[transform:rotateY(180deg)]" : ""
+        } group-hover:[transform:rotateY(180deg)]`}
+      >
+        {/* Front Side */}
+        <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] bg-zinc-800/30 rounded-3xl border-zinc-300 border-solid border-[1px] overflow-hidden [transform:rotateY(0deg)]">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src={data.image}
+              alt={data.name}
+              fill
+              className="object-cover"
+            />
           </div>
-          <h1 className="mt-auto text-white text-4xl ">{data.role} </h1>
+          {/* Front Content */}
+          <div className="p-5 flex flex-col h-full relative z-10">
+            <div className="flex">
+              <h1 className="text-white text-4xl">{data.name}</h1>
+              <div className="ml-auto">
+                <data.icon className="text-white w-8 h-8" />
+              </div>
+            </div>
+            <h1 className="mt-auto text-white text-4xl">{data.role}</h1>
+          </div>
         </div>
 
         {/* Back Side */}
-        <div className="transform:rotateY(180deg)]  [backface-visibility:hidden]  inset-0 p-5  flex flex-col  w-full z-10  rounded-3xl absolute h-full">
-          <h1 className="text-white text-4xl"> {data.name} </h1>
+        <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gray-800 rounded-3xl border-zinc-300 border-solid border-[1px]">
+          <div className="p-5 flex flex-col h-full">
+            <h1 className="text-white text-4xl">{data.name}</h1>
+            <p className="mt-4 text-white">{data.description}</p>
+          </div>
         </div>
       </div>
     </div>

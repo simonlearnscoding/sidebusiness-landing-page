@@ -28,7 +28,7 @@ export default function Home() {
   // return <ParallaxComponent />;
   return (
     <div className=" relative h-fit bg-white">
-      <Navbar />
+      <Navbar sections={sections} />
       <Header />
       <MobileCTA />
       <SubHeader />

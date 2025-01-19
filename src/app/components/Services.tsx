@@ -54,7 +54,7 @@ export default function Services() {
     },
   ];
   return (
-    <div className="flex  mt-10   min-h-screen   flex-col">
+    <div className="flex   mt-10      flex-col">
       <div className="mt-5 lg:mx-20 mx-4 ">
         <h1 className=" text-white text-center w-full  ">
           We Design, Build, And Brand it{" "}
