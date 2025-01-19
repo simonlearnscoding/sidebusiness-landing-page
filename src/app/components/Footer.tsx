@@ -4,11 +4,12 @@ import {
   LinkedinLogo,
   InstagramLogo,
 } from "@phosphor-icons/react";
+
 export default function Footer() {
   const logoSize = 32;
   return (
-    <div className="flex  items-center justify-center mb-28 mt-14 flex-col">
-      <div className="flex items-center justify-center">
+    <div className="flex  items-center justify-center lg:mx-20 mb-28 mt-14 flex-col">
+      <div className="flex  items-center justify-center lg:mr-auto">
         <Logo />
         <div className="flex flex-col gap-0">
           <div className="text-dark font-medium  text-xl font-sans">
@@ -17,14 +18,16 @@ export default function Footer() {
           <div className="  font-sans"> Digital Agency</div>
         </div>
       </div>
-      <div className=" mt-4 font-sans text-gray-700">
-        © 2025, SeamlessWeb. All rights reserved.
-      </div>
-      <div className="flex items-center gap-8 mt-5 text-gray-700">
-        <TwitterLogo size={logoSize} weight={"fill"} />
-        <FacebookLogo size={logoSize} weight={"fill"} />
-        <LinkedinLogo size={logoSize} weight={"fill"} />
-        <InstagramLogo size={logoSize} weight={"fill"} />
+      <div className="flex items-center  lg:flex-row lg:w-full justify-center flex-col">
+        <div className=" mt-4 lg:mt-0 font-sans text-gray-700 lg:mr-auto">
+          © 2025, SeamlessWeb. All rights reserved.
+        </div>
+        <div className="flex items-center justify-center gap-8 mt-5 lg:mt-0 text-gray-700">
+          <TwitterLogo size={logoSize} weight={"fill"} />
+          <FacebookLogo size={logoSize} weight={"fill"} />
+          <LinkedinLogo size={logoSize} weight={"fill"} />
+          <InstagramLogo size={logoSize} weight={"fill"} />
+        </div>
       </div>
     </div>
   );
@@ -32,7 +35,7 @@ export default function Footer() {
 
 const Logo = () => {
   return (
-    <div className="font-sans text-primary-500 relative w-fit h-fit text-xl p-2 rounded-md  font-normal">
+    <div className="font-sans text-primary-500 relative w-fit h-fit text-xl p-2 lg:p-0 lg:pr-2 rounded-md  font-normal">
       <svg
         width="40"
         height="40"

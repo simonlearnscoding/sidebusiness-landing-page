@@ -13,7 +13,7 @@ export default function ContactUs() {
           your chances of success.{" "}
         </div>
 
-        <div className="mb-6 lg:text-5xl px-4 flex items-center mt-24 text-2xl font-sans   bg-white text-center w-full lg:w-fit text-gray-900  py-5 rounded-xl lg:py-5">
+        <div className="cursor-pointer mb-6 lg:text-5xl px-4 md:gap-2 flex items-center mt-24 text-2xl font-sans   bg-white text-center w-full lg:w-fit text-gray-900  py-5 rounded-xl lg:py-5">
           <div className="rounded-full bg-green-400 w-2 h-2 mr-2"> </div>
           <div className="mr-auto font-medium lg:text-3xl"> 2 Spots Left </div>
           <CalendarCheck
