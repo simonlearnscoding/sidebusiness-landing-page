@@ -13,7 +13,7 @@ const TeamMembersData = [
   {
     name: "Simon",
     role: "DEVELOPER",
-    image: "/Simon.jpg",
+    image: "/simon-no-bg.png",
     icon: Code,
     description: `
 “I will customize your website for optimal performance that goes beyond what a typical design agency can offer. I don’t use pre-built templates but instead proper tailor-made solutions that will help meet your business needs and goals. From complex features to integrated third-party systems we make websites you can be proud to show the world.”

@@ -78,7 +78,7 @@ export default function Services() {
 
 function Service({ Icon, name, bullets }) {
   return (
-    <div className=" p-5 lg:p-14  flex   lg:flex-1 h-full   bg-gray-900 rounded-3xl border-solid border-[2px]  border-gray-900 hover:border-white   flex-col">
+    <div className=" p-5 lg:p-14  flex hover:bg-gradient-to-tr hover:from-gray-900 hover:to-gray-800 transition-all   lg:flex-1 h-full   bg-gray-900 rounded-3xl border-solid border-[2px]  border-gray-900 hover:border-white   flex-col">
       <div className="flex text-white flex-col  items-start gap-8 lg:gap-6 ">
         <Icon size={32} />
         <div className=" font-sans font-medium text-4xl text-white ">

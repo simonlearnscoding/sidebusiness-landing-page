@@ -1,11 +1,11 @@
 import { CalendarCheck } from "@phosphor-icons/react";
 export default function ContactUs() {
   return (
-    <div className=" flex bg-gradient-to-br mt-10 lg:mt-36 from-gray-950 to-primary-500 mx-4 lg:mx-20 rounded-3xl  flex-col  ">
+    <div className=" flex bg-gradient-to-br mt-10 lg:mt-36 shadow-md from-gray-900 from-30% to-primary-500 mx-4 lg:mx-20 rounded-3xl  flex-col  ">
       <div className="flex   px-4 md:px-6 lg:px-16 lg:py-20 md:py-6  items-start justify-start flex-col md:justify-center flex-1 ">
-        <h1 className=" mt-16 text-white  md:mt-0 text-start max-w-2xl">
-          Turn Clicks Into{" "}
-          <span className="span">Customers With Seamless Web!</span>
+        <h1 className="mt-16 text-start max-w-2xl md:mt-0 bg-gradient-to-r from-blue-500 via-70% via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Turn Clicks Into
+          <span className="lg:pl-3 pl-2">Customers With Seamless Web!</span>
         </h1>
         <div className="text-white lg:text-3xl md:text-xl  md:w-10/12 lg:w-8/12 mr-4 font-inter mt-3 lg:mt-6">
           {" "}
