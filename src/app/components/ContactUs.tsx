@@ -1,9 +1,15 @@
 import { CalendarCheck } from "@phosphor-icons/react";
+import Image from "next/image";
 export default function ContactUs() {
   return (
     <div className=" flex bg-gradient-to-br mt-10 lg:mt-36 shadow-md from-gray-900 from-30% to-primary-500 mx-4 lg:mx-20 rounded-3xl  flex-col  ">
-      <div className="flex   px-4 md:px-6 lg:px-16 lg:py-20 md:py-6  items-start justify-start flex-col md:justify-center flex-1 ">
-        <h1 className="mt-16 text-start max-w-2xl md:mt-0 bg-gradient-to-r from-blue-500 via-70% via-purple-500 to-pink-500 bg-clip-text text-transparent">
+      <div className="flex   px-4 md:px-6 lg:px-16 lg:py-20 relative md:py-6  items-start justify-start flex-col md:justify-center flex-1 ">
+        <div className="absolute hidden  lg:flex items-center justify-center opacity-80 w-64 h-96 rounded-2xl bg-gradient-to-b from-[#0188D7]/70 to-[#91D1F5] right-28 top-1/2 border-primary-500 border-solid border-4 -translate-y-1/2 rotate-6">
+          <div className="flex items-center justify-center opacity-50">
+            <Image src="/Logo.svg" alt="Logo" width={120} height={120} />
+          </div>
+        </div>
+        <h1 className="mt-16 text-start max-w-2xl z-10 md:mt-0 bg-gradient-to-r from-blue-500 via-70% via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Turn Clicks Into
           <span className="lg:pl-3 pl-2">Customers With Seamless Web!</span>
         </h1>
