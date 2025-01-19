@@ -25,20 +25,20 @@ const QA = [
 
 export default function FAQ({}) {
   return (
-    <div className="flex mt-8 w-full items-center gap-4 flex-col justify-center">
+    <div className="flex mt-8 lg:mt-28 w-full items-center gap-4 flex-col justify-center">
       <h1>FAQ:</h1>
       <div className="font-inter text-gray-800 tracking-[-6%] mx-8 text-center text-2xl">
         Quick questions to answer because you don’t have to wonder
       </div>
 
-      <div className="w-full mt-10 px-5 text-xl">
+      <div className="w-full mt-10 lg:mt-20 px-5 lg:px-20 text-xl">
         <Accordion className="font-sans w-full" type="single" collapsible>
           {QA.map((qa, index) => (
             <AccordionItem value={`item-${index}`}>
-              <AccordionTrigger className="font-medium text-xl">
+              <AccordionTrigger className="font-medium lg:text-2xl text-xl">
                 {qa.Question}
               </AccordionTrigger>
-              <AccordionContent className="text-xl">
+              <AccordionContent className="text-xl  lg:text-2xl">
                 {qa.Answer}
               </AccordionContent>
             </AccordionItem>
