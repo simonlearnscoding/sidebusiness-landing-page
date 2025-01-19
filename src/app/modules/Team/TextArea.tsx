@@ -1,4 +1,3 @@
-import Image from "next/image";
 const TextArea = () => {
   return (
     <div className=" flex   w-full ">
@@ -7,9 +6,6 @@ const TextArea = () => {
           The Dreamers & Doers <span className="span pl-2">At Seamless...</span>{" "}
         </h1>
       </div>
-      {/* <div className="mr-24 md:block hidden ml-auto mt-1  h-[233px] relative w-20"> */}
-      {/*   <Image fill src={"/meet-the-team.png"} alt={"svg"} /> */}
-      {/* </div> */}
     </div>
   );
 };
