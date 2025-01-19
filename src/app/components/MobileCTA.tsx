@@ -1,13 +1,9 @@
-import { Bebas_Neue } from "@next/font/google";
 import { useSectionStore } from "@/store/useSectionStore";
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-});
 
-const MobileCTA = ({}) => {
+const MobileCTA = () => {
   const scrollToSection = useSectionStore((state) => state.scrollToSection);
   const activeSection = useSectionStore((state) => state.activeSection);
+
   const handleClick = () => {
     if (activeSection === "header") {
       scrollToSection("contact");
@@ -15,12 +11,20 @@ const MobileCTA = ({}) => {
       console.log("send form");
     }
   };
+
   return (
-    <div onClick={handleClick} className="fixed sm:hidden w-full z-40 bottom-0">
+    <div
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      className="fixed sm:static w-full sm:w-auto  z-40 bottom-0 sm:bottom-auto sm:flex sm:justify-center sm:items-center sm:mt-10"
+    >
       <div
-        className={`${bebasNeue.className} box-border text-zinc-100 whitespace-nowrap py-8  cursor-pointer ${activeSection == "header" ? "bg-primary-500" : "bg-violet-800"} z-20 transition-all font-sans  flex  justify-center text-3xl font-normal`}
+        className={`box-border px-10 font-sans shadow-sm font-semibold mx-4 mb-6 sm:mb-0 rounded-full text-white text-xl whitespace-nowrap py-4 sm:py-6 cursor-pointer ${
+          activeSection === "header" ? "bg-primary-500" : "bg-gray-900"
+        } z-20 transition-all flex justify-center text-3xl`}
       >
-        {activeSection === "contact" ? "CONTACT US" : "START YOUR JOURNEY"}
+        {activeSection === "contact" ? "CONTACT US" : "RESERVE A SPOT"}
       </div>
     </div>
   );

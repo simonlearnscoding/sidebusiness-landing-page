@@ -20,54 +20,29 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
   };
 
   return (
-    <div
-      className={`py-4 min-w-[340px] [perspective:1000px] sm:w-full h-full ${
-        isFlipped ? "" : "group"
-      }`}
-      onClick={handleClick} // Enable flipping on click
-    >
-      <div
-        className={`w-full h-full border-zinc-300 [transform-style:preserve-3d] transition-all duration-400 border-solid border-[1px] relative rounded-3xl ${
-          isFlipped
-            ? "[transform:rotateY(180deg)]"
-            : "group-hover:[transform:rotateY(180deg)]"
-        }`}
-      >
-        {/* Front Side */}
-        <div className="absolute  inset-0 bg-zinc-800/30  p-5 flex flex-col rounded-3xl h-full w-full [backface-visibility:hidden]">
-          <Image
-            src={data.image}
-            alt={data.name}
-            fill
-            className="  object-cover z-0 rounded-3xl"
-          />
-          <div className="flex  flex-col group-hover:z-0 z-10 justify-between h-full">
-            <div className="flex">
-              <h2 className="text-white text-4xl">{data.name}</h2>
-              <div className="ml-auto">
-                <data.icon className="text-white w-8 h-8" />
-              </div>
+    <div className="py-4 min-w-[340px] flex-1 [perspective:1000px] sm:w-full h-full group">
+      <div className="w-full h-full [backface-visibility:hidden] border-zinc-300 [transform-style:preserve-3d] transition-all duration-400 group-hover:[transform:rotateY(180deg)] border-solid border-[1px]  relative rounded-3xl">
+        <Image
+          src={data.image}
+          alt={data.name}
+          fill
+          className="object-cover rounded-3xl"
+        />
+        {/* Front side */}
+        <div className=" p-5  flex flex-col  w-full z-10 bg-zinc-800/30 rounded-3xl absolute h-full">
+          <div className="flex">
+            <h1 className="text-white text-4xl"> {data.name} </h1>
+            <div className="ml-auto">
+              <data.icon className="text-white w-8 h-8" />
             </div>
             <h2 className="mt-auto">{data.role}</h2>
           </div>
+          <h1 className="mt-auto text-white text-4xl ">{data.role} </h1>
         </div>
 
         {/* Back Side */}
-        <div className="absolute inset-0 p-5 flex flex-col items-center rounded-3xl h-full w-full [transform:rotateY(180deg)] [backface-visibility:hidden] bg-zinc-900">
-          <div className="rounded-full w-20 h-20  relative">
-            <Image
-              src={data.image}
-              alt={data.name}
-              fill
-              className="object-cover rounded-full"
-            />
-          </div>
-          <p className="text-white text-xl text-center mt-16">
-            {data.description}
-          </p>
-          <div className="ml-auto mt-auto">
-            {data.icon && <data.icon className="text-white w-12 h-12" />}
-          </div>
+        <div className="transform:rotateY(180deg)]  [backface-visibility:hidden]  inset-0 p-5  flex flex-col  w-full z-10  rounded-3xl absolute h-full">
+          <h1 className="text-white text-4xl"> {data.name} </h1>
         </div>
       </div>
     </div>
