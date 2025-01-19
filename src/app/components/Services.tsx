@@ -54,7 +54,7 @@ export default function Services() {
     },
   ];
   return (
-    <div className="flex   mt-10      flex-col">
+    <div className="flex mt-10 flex-col">
       <div className="mt-5 lg:mx-20 mx-4 ">
         <h1 className=" text-white text-center w-full  ">
           We Design, Build, And Brand it{" "}
@@ -62,7 +62,7 @@ export default function Services() {
         </h1>
       </div>
 
-      <div className="w-full  px-4 flex lg:px-20 gap-3 lg:gap-4 py-8 mt-4 lg:mt-24 overflow-x-auto whitespace-nowrap">
+      <div className="w-full  px-4 flex lg:px-20 gap-3  lg:gap-4 py-8 mt-4 lg:mt-24 overflow-x-auto whitespace-nowrap">
         {services.map((service) => (
           <Service
             Icon={service.icon}
@@ -78,7 +78,7 @@ export default function Services() {
 
 function Service({ Icon, name, bullets }) {
   return (
-    <div className=" p-5 lg:p-14  flex  lg:flex-1 h-full   bg-gray-900 rounded-3xl border-solid border-[2px]  border-gray-900 hover:border-white   flex-col">
+    <div className=" p-5 lg:p-14  flex   lg:flex-1 h-full   bg-gray-900 rounded-3xl border-solid border-[2px]  border-gray-900 hover:border-white   flex-col">
       <div className="flex text-white flex-col  items-start gap-8 lg:gap-6 ">
         <Icon size={32} />
         <div className=" font-sans font-medium text-4xl text-white ">
