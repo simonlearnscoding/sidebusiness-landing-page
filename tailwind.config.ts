@@ -67,6 +67,10 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(255, 255, 255, 0.5)" },
+          "50%": { boxShadow: "0 0 30px rgba(255, 255, 255, 0.7)" },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -87,6 +91,8 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+
+        glow: "glow 2s ease-in-out infinite",
       },
     },
   },

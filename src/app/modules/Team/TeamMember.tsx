@@ -30,9 +30,9 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
         } group-hover:[transform:rotateY(180deg)]`}
       >
         {/* Front Side */}
-        <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] bg-zinc-800/30 rounded-3xl border-zinc-300 border-solid border-[1px] overflow-hidden [transform:rotateY(0deg)]">
+        <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl border-zinc-300 border-solid border-[1px] overflow-hidden [transform:rotateY(0deg)] shadow-[0_0_20px_rgba(255,255,255,0.5)] animate-glow">
           {/* Background Image */}
-          <div className="absolute inset-0">
+          <div className="absolute  inset-0">
             <Image
               src={data.image}
               alt={data.name}
