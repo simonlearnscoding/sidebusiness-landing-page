@@ -21,11 +21,11 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
 
   return (
     <div
-      className="py-4 min-w-[340px] flex-1 [perspective:1000px] sm:w-full h-full group"
+      className="py-4 min-w-[340px] overflow-hidden     flex-1 [perspective:1000px] sm:w-full h-full group"
       onClick={handleClick} // Click handling for mobile
     >
       <div
-        className={`relative w-full h-full [transform-style:preserve-3d] transition-transform duration-300 ease-out ${
+        className={`relative w-full h-full  [transform-style:preserve-3d] transition-transform duration-300 ease-out ${
           isFlipped ? "[transform:rotateY(180deg)]" : ""
         } group-hover:[transform:rotateY(180deg)]`}
       >

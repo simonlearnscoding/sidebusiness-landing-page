@@ -12,7 +12,7 @@ const TeamArea = () => {
   return (
     <div
       ref={scrollRef}
-      className="flex   overflow-x-scroll  snap-x snap-mandatory lg:mt-4  sm:px-20 px-4 flex-1"
+      className="flex  xl:overflow-x-hidden overflow-x-scroll  snap-x snap-mandatory lg:mt-4  sm:px-5 lg:px-20 px-4 flex-1"
     >
       <div className="flex  min-w-fit h-full  items-center gap-3 w-full   md:gap-4">
         {TeamMembersData.map((member) => (
