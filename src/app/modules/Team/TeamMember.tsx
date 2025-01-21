@@ -31,8 +31,7 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
       >
         {/* Front Side */}
         <div
-          className="absolute
-shadow-[-6px_-6px_33px_0px_rgba(255,_255,_255,_0.1)]
+          className="absolute shadow-[-6px_-6px_33px_0px_rgba(255,_255,_255,_0.1)]
           shadow-md
           inset-0 w-full h-full [backface-visibility:hidden] bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl border-zinc-300 border-solid border-[1px] overflow-hidden [transform:rotateY(0deg)] shadow-[0_0_20px_rgba(255,255,255,0.5)] animate-glow"
         >
