@@ -24,9 +24,29 @@ export default function Footer() {
         </div>
         <div className="flex items-center justify-center gap-8 mt-5 lg:mt-0 text-gray-700  ">
           {/* <TwitterLogo size={logoSize} weight={"fill"} /> */}
-          <FacebookLogo size={logoSize} weight={"fill"} />
+          <FacebookLogo
+            className="cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://www.facebook.com/people/Seamless-Web/61572475047055/",
+                "_blank",
+              )
+            }
+            size={logoSize}
+            weight={"fill"}
+          />
           {/* <LinkedinLogo size={logoSize} weight={"fill"} /> */}
-          <InstagramLogo size={logoSize} weight={"fill"} />
+          <InstagramLogo
+            className="cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://www.instagram.com/seamlessweb.dev/",
+                "_blank",
+              )
+            }
+            size={logoSize}
+            weight={"fill"}
+          />
         </div>
       </div>
     </div>
