@@ -60,7 +60,14 @@ shadow-[-6px_-6px_33px_0px_rgba(255,_255,_255,_0.1)]
         {/* Back Side */}
         <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gray-800 rounded-3xl border-zinc-300 border-solid border-[1px]">
           <div className="p-5 flex flex-col h-full">
-            <h1 className="text-white text-4xl">{data.name}</h1>
+            <div className="rounded-full h-5 w-5 relative">
+              <Image
+                fill
+                src={data.image}
+                alt={data.name}
+                className="object-cover"
+              />
+            </div>
             <p className="mt-4 text-white">{data.description}</p>
           </div>
         </div>

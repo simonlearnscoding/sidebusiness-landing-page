@@ -7,7 +7,7 @@ const Button = ({ name, handleClick, active }) => {
   return (
     <div
       onClick={handleClick}
-      className={`font-sans flex transition-all hover:bg-gray-800 ${active ? "bg-gray-800" : "bg-inherit"} px-4 py-2 rounded-lg cursor-pointer text-xl  h-full font-medium text-gray-50`}
+      className={`font-sans flex transition-all hover:bg-gray-800 ${active ? "bg-gray-800" : "bg-inherit"} px-4 py-2 rounded-lg cursor-pointer text-xl  h-full font-medium `}
     >
       {name}
     </div>
@@ -35,11 +35,16 @@ const TopLogo = () => {
 };
 
 const BottomNavbar = ({ sections, scrollToSection, activeSection }) => {
+  const isDarkMode = true;
   return (
     <div className="fixed flex bottom-4 items-center    left-1/2  hidden md:flex -translate-x-1/2 md:w-fit px-4   z-50  h-fit w-full">
       {/* BOTTOM NAVBAR */}
-      <div className="font-sans items-center flex flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   bg-gray-900 text-xl  h-full font-normal text-gray-50">
-        <div className=" relative text-white bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10">
+      <div
+        className={`font-sans items-center flex flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-900" : "bg-gray-50"} text-xl  h-full font-normal text-gray-50`}
+      >
+        <div
+          className={` relative ${isDarkMode ? "text-gray-50" : " text-gray-900"} bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10`}
+        >
           <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
         </div>
 
