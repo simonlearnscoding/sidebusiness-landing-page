@@ -7,11 +7,11 @@ import {
 
 function WorkWithUsCard({ Icon, name, explanation }) {
   return (
-    <div className="font-sans text-gray-800 font-medium  tracking-[-6%] text-2xl bg-gray-100 flex flex-col flex-1 p-5 lg:p-14 rounded-3xl">
+    <div className="font-sans text-gray-800   tracking-[-6%] text-2xl bg-gray-100 flex flex-col flex-1 p-5 lg:p-14 rounded-3xl">
       <Icon weight={"duotone"} className="w-8 h-8 lg:w-12 lg:h-12" />{" "}
       {/* Responsive Icon */}
-      <div className="mt-20 lg:mt-40 lg:text-5xl">{name}</div>
-      <div className="font-regular font-inter text-gray-800 tracking-[-6%] text-xl lg:text-3xl mt-5">
+      <div className="mt-20 lg:mt-40 font-medium lg:text-5xl">{name}</div>
+      <div className=" font-sans text-gray-800 tracking-[-6%] font-regular text-xl lg:text-3xl mt-5">
         {explanation}
       </div>
     </div>

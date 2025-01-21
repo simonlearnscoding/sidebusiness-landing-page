@@ -12,7 +12,7 @@ export default function BookAnAppointment() {
           Book an appointment for a free consultation call to discuss your{" "}
           <span className=" text-white span"> Dream Website.</span>
         </h1>
-        <div className=" font-inter text-regular text-xl lg:text-3xl text-dark">
+        <div className=" font-sans text-regular text-xl lg:text-3xl text-dark">
           Let’s put your business on the map!
         </div>
         <button

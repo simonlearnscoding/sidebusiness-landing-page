@@ -23,9 +23,9 @@ export default function Footer() {
           © 2025, SeamlessWeb. All rights reserved.
         </div>
         <div className="flex items-center justify-center gap-8 mt-5 lg:mt-0 text-gray-700  ">
-          <TwitterLogo size={logoSize} weight={"fill"} />
+          {/* <TwitterLogo size={logoSize} weight={"fill"} /> */}
           <FacebookLogo size={logoSize} weight={"fill"} />
-          <LinkedinLogo size={logoSize} weight={"fill"} />
+          {/* <LinkedinLogo size={logoSize} weight={"fill"} /> */}
           <InstagramLogo size={logoSize} weight={"fill"} />
         </div>
       </div>

@@ -31,16 +31,16 @@ export default function Home() {
       <Navbar sections={sections} />
       <Header />
       <MobileCTA />
-      <SubHeader />
+      <SubHeader id={"About Us"} />
       <WorkingWithUs />
       <div className="flex flex-col bg-gradient-to-br from-gray-800 from-1% to-gray-950">
-        <Services />
+        <Services id={"Our Services"} />
         <BookAnAppointment />
       </div>
 
       {/* <ParallaxComponent /> */}
       {/* <HeaderSection id="header" /> */}
-      <MeetTheTeam id="team" />
+      <MeetTheTeam id="Team" />
       <MarqueeReusable inputText="LET'S WORK TOGETHER" />
       <FAQ />
 
@@ -49,7 +49,7 @@ export default function Home() {
       {/* <LetsChat id="contact" /> */}
       {/* <ContactFormSection id="contact" /> */}
       {/* <Comet /> */}
-      <ContactUs />
+      <ContactUs id={"Contact Us"} />
       <Footer />
     </div>
   );
