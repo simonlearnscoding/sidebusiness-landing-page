@@ -14,9 +14,12 @@ const Button = ({ name, handleClick, active }) => {
   );
 };
 
-const CallCTA = ({ name }) => {
+const CallCTA = ({ name, onClick }) => {
   return (
-    <div className="font-sans flex transition-all border-solid border-[2px] border-blue-300 hover:bg-zinc-900 px-3 gap-1 py-2 rounded-md cursor-pointer bg-primary-500 text-xl  h-full font-semibold text-zinc-100">
+    <div
+      onClick={onClick}
+      className="font-sans flex transition-all border-solid border-[2px] border-blue-300 hover:bg-zinc-900 px-3 gap-1 py-2 rounded-md cursor-pointer bg-primary-500 text-xl  h-full font-semibold text-zinc-100"
+    >
       <div className=" flex justify-center items-center ">
         <Phone weight={"bold"} size={20} />
       </div>
@@ -60,7 +63,12 @@ const BottomNavbar = ({ sections, scrollToSection, activeSection }) => {
             name={section}
           />
         ))}
-        <CallCTA name={"Book a call"} />
+        <CallCTA
+          onClick={() =>
+            window.open("https://calendly.com/simon-muscas/30min", "_blank")
+          }
+          name={"Book a call"}
+        />
         {/* MOBILE HAMBURGER ICON */}
         <div className="sm:hidden ml-auto">
           <List size={28} className={"text-zinc-900"} />

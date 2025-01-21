@@ -5,11 +5,7 @@ const MobileCTA = () => {
   const activeSection = useSectionStore((state) => state.activeSection);
 
   const handleClick = () => {
-    if (activeSection === "header") {
-      scrollToSection("contact");
-    } else if (activeSection === "contact") {
-      console.log("send form");
-    }
+    window.open("https://calendly.com/simon-muscas/30min", "_blank");
   };
 
   return (

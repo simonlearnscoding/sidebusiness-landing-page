@@ -22,7 +22,7 @@ export default function Footer() {
         <div className=" mt-4 lg:mt-0 font-sans text-gray-700 lg:mr-auto">
           © 2025, SeamlessWeb. All rights reserved.
         </div>
-        <div className="flex items-center justify-center gap-8 mt-5 lg:mt-0 text-gray-700">
+        <div className="flex items-center justify-center gap-8 mt-5 lg:mt-0 text-gray-700  ">
           <TwitterLogo size={logoSize} weight={"fill"} />
           <FacebookLogo size={logoSize} weight={"fill"} />
           <LinkedinLogo size={logoSize} weight={"fill"} />
@@ -35,7 +35,7 @@ export default function Footer() {
 
 const Logo = () => {
   return (
-    <div className="font-sans text-primary-500 relative w-fit h-fit text-xl p-2 lg:p-0 lg:pr-2 rounded-md  font-normal">
+    <div className="font-sans pointer-cursor text-primary-500 relative w-fit h-fit text-xl p-2 lg:p-0 lg:pr-2 rounded-md  font-normal">
       <svg
         width="40"
         height="40"

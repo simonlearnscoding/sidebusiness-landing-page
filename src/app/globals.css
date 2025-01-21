@@ -117,7 +117,7 @@ body {
 
 @layer base {
   h1 {
-    @apply font-medium text-black tracking-[-6%] font-sans xl:text-8xl lg:text-6xl md:text-5xl sm:block  text-4xl;
+    @apply font-medium text-black tracking-[-6%] font-sans xl:text-7xl lg:text-6xl md:text-5xl sm:block  text-4xl;
   }
 
   h2 {

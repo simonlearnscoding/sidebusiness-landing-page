@@ -9,11 +9,11 @@ export default function ContactUs() {
             <Image src="/Logo.svg" alt="Logo" width={120} height={120} />
           </div>
         </div>
-        <h1 className="mt-16 text-start max-w-2xl z-10 md:mt-0 bg-gradient-to-r from-blue-500 via-70% via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <h1 className="mt-16 text-start max-w-6xl z-10 md:mt-0 bg-gradient-to-r from-blue-500 via-70% via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Turn Clicks Into
           <span className="lg:pl-3 pl-2">Customers With Seamless Web!</span>
         </h1>
-        <div className="text-white lg:text-3xl md:text-xl  md:w-10/12 lg:w-8/12 mr-4 font-inter mt-3 lg:mt-6">
+        <div className="text-white lg:text-2xl md:text-xl  md:w-10/12 lg:w-8/12 mr-4 font-inter mt-3 lg:mt-6">
           {" "}
           At seamlessWeb you’ll be part of a team whose only goal is increasing
           your chances of success.{" "}
