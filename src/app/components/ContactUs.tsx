@@ -16,7 +16,7 @@ export default function ContactUs({ id }: { id: string }) {
           Turn Clicks Into
           <span className="lg:pl-3 pl-2">Customers With Seamless Web!</span>
         </h1>
-        <div className="text-white lg:text-2xl md:text-xl  md:w-10/12 lg:w-8/12 mr-4 font-sans mt-3 lg:mt-6">
+        <div className="text-white lg:text-2xl md:text-xl  font-medium md:w-10/12 lg:w-8/12 mr-4 font-sans mt-3 lg:mt-6">
           {" "}
           At seamlessWeb you’ll be part of a team whose only goal is increasing
           your chances of success.{" "}

@@ -12,14 +12,14 @@ export default function BookAnAppointment() {
           Book an appointment for a free consultation call to discuss your{" "}
           <span className=" text-white span"> Dream Website.</span>
         </h1>
-        <div className=" font-sans text-regular text-xl lg:text-3xl text-dark">
+        <div className=" font-sans font-medium text-xl lg:text-3xl text-dark">
           Let’s put your business on the map!
         </div>
         <button
           onClick={() =>
             window.open("https://calendly.com/simon-muscas/30min", "_blank")
           }
-          className="mb-7  shadow-[inset_19px_19px_31px_0px_rgba(255,_255,_255,_0.10)]  shadow-[0px_44px_12px_0px_rgba(0,_0,_0,_0.01)]  shadow-[0px_28px_11px_0px_rgba(0,_0,_0,_0.05)]   shadow-[0px_15px_9px_0px_rgba(0,_0,_0,_0.17)]  shadow-[inset_-20px_-21px_19px_0px_rgba(0,_0,_0,_0.3)] lg:mb-24 items-center shadow-lg gap-3 justify-center flex mt-14 bg-dark font-sans w-full lg:w-fit shadow-lg text-2xl font-medium rounded-xl text-white py-5 px-5 "
+          className="mb-7  shadow-[inset_19px_19px_31px_0px_rgba(255,_255,_255,_0.10)]  shadow-[0px_44px_12px_0px_rgba(0,_0,_0,_0.01)]  shadow-[0px_28px_11px_0px_rgba(0,_0,_0,_0.05)]   shadow-[0px_15px_9px_0px_rgba(0,_0,_0,_0.17)]  shadow-[inset_-20px_-21px_19px_0px_rgba(0,_0,_0,_0.3)] lg:mb-24 items-center shadow-lg gap-3 justify-center flex mt-14 bg-dark hover:bg-primary-500 hover:text-dark animate-all border-solid border-dark border-[1px] font-sans w-full lg:w-fit shadow-lg text-2xl font-medium rounded-xl text-white py-5 px-5 "
         >
           <div className=""> SAVE ME A SPOT </div>
           <CalendarCheck weight="bold" size={24} />
