@@ -7,19 +7,24 @@ import {
 
 const QA = [
   {
-    Question: "Why did we create SeamlessWeb?",
+    Question: "Why did we create Seamless Web?",
     Answer:
-      "To help those who are struggling with their current website or to help create one.",
+      "Creating a business is a challenge where your focus is on building the best possible product or service. Getting your business in the digital space is a whole other challenge in itself. Entrepreneurs and business owners can feel overwhelmed juggling both tasks. We step in as a team to remove that burden by getting your business up and running online.",
   },
   {
     Question: "How do we help you?",
     Answer:
-      "We analyze your website and find improvements in order to increase conversion, user experience, and superior designs.",
+      "We analyze your current website and find improvements to better the user experience and increase customer conversions. This is achieved through better web design and using software and tools to analyze website data.",
   },
   {
     Question: "Who is behind Seamless Web?",
     Answer:
-      " An international team who are gifted in marketing, designing, and developing. ",
+      "An international team gifted in marketing, designing, and developing. These three areas are key to creating a successful website. We are passionate about what we do and have come together to help businesses take the next step by upgrading their website and marketing strategy.",
+  },
+  {
+    Question: "When will my website be completed?",
+    Answer:
+      "The timeline depends on a case-by-case basis. If you book an appointment with us, we can provide a more detailed estimate for your specific project.",
   },
 ];
 

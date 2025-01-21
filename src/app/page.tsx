@@ -33,7 +33,7 @@ export default function Home() {
       <MobileCTA />
       <SubHeader />
       <WorkingWithUs />
-      <div className="flex  flex-col bg-gradient-to-br from-gray-800 from-1% to-gray-950">
+      <div className="flex flex-col bg-gradient-to-br from-gray-800 from-1% to-gray-950">
         <Services />
         <BookAnAppointment />
       </div>
