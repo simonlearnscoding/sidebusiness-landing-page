@@ -28,8 +28,12 @@ const CallCTA = ({ name }) => {
 
 const TopLogo = () => {
   return (
-    <div className="fixed top-4 font-sans  w-fit h-fit text-xl p-2 rounded-md bg-gray-900  sm:mx-10 lg:mx-20  z-50 h-fit  text-white font-normal">
-      <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
+    <div className="">
+      <div className="fixed top-0 py-4  z-50 bg-white w-full">
+        <div className="  font-sans  w-fit  text-xl p-2 rounded-md bg-gray-900  sm:mx-10 lg:mx-20   h-fit  text-white font-normal">
+          <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
+        </div>
+      </div>
     </div>
   );
 };

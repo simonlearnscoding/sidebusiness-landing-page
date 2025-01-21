@@ -58,16 +58,21 @@ const TeamMember = ({ data }: { data: MemberProps }) => {
 
         {/* Back Side */}
         <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gray-800 rounded-3xl border-zinc-300 border-solid border-[1px]">
-          <div className="p-5 flex flex-col h-full">
-            <div className="rounded-full h-5 w-5 relative">
+          <div className="p-5 lg:px-8 flex flex-col h-full">
+            <div className="rounded-full h-28 w-28 mt-10 mx-auto bg-blue-300 relative">
+              {" "}
               <Image
                 fill
                 src={data.image}
+                className="rounded-full"
+                objectFit="cover"
                 alt={data.name}
-                className="object-cover"
               />
             </div>
-            <p className="mt-4 text-white">{data.description}</p>
+            <p className="mt-24 text-white text-2xl">{data.description}</p>
+            <div className="mt-auto ml-auto pb-4">
+              <data.icon className="text-white w-8 h-8" />
+            </div>
           </div>
         </div>
       </div>
