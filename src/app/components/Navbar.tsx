@@ -1,7 +1,13 @@
 // Navbar Component
-import { Phone, List } from "@phosphor-icons/react/dist/ssr";
+import { Phone, X, List } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import { useSectionStore } from "@/store/useSectionStore";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
 const Button = ({ name, handleClick, active, isDarkMode }) => {
   return (
@@ -29,18 +35,71 @@ const CallCTA = ({ name, onClick }) => {
   );
 };
 
-const TopLogo = ({ isDarkMode }) => {
+const TopLogo = ({ isDarkMode, sections, scrollToSection }) => {
   return (
     <div className="">
       <div
-        className={`fixed animate-all  duration-600 top-0 py-4  z-50 ${!isDarkMode ? "bg-white" : "bg-gray-900"} w-full`}
+        className={`fixed animate-all flex  duration-600 items-center top-0 py-4  z-10 ${!isDarkMode ? "bg-white" : "bg-gray-900"} w-full`}
       >
         <div
-          className={`font-sans  animate-all  duration-600  w-fit  text-xl p-2 rounded-md ${!isDarkMode ? " bg-gray-900 text-gray-900" : " bg-gray-900 text-gray-50"}  sm:mx-10 lg:mx-20   h-fit   font-normal`}
+          className={`font-sans  animate-all  duration-600  w-fit  text-xl p-2   rounded-md ${!isDarkMode ? " bg-gray-900 text-gray-900" : " bg-gray-900 text-gray-50"}  sm:mx-10 mx-4 lg:mx-20   h-fit   font-normal`}
         >
           <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
         </div>
+        <div className="ml-auto sm:hidden mr-4">
+          <MobileMenu
+            isDarkMode={isDarkMode}
+            sections={sections}
+            scrollToSection={scrollToSection}
+          />
+        </div>
       </div>
+    </div>
+  );
+};
+
+const DrawerItem = ({ name, handleClick }) => {
+  return (
+    <div
+      onClick={handleClick}
+      className="font-sans text-center text-gray-800 hover:text-primary-500 flex transition-all hover:bg-gray-200 px-4 py-4 rounded-lg cursor-pointer text-3xl   font-medium "
+    >
+      {name}
+    </div>
+  );
+};
+
+const MobileMenu = ({ sections, scrollToSection, isDarkMode }) => {
+  return (
+    <div className="">
+      <Drawer direction="right">
+        <DrawerTrigger>
+          <List
+            size={28}
+            className={` ${isDarkMode ? "text-gray-50" : "text-gray-950"}`}
+          />
+        </DrawerTrigger>
+        <DrawerContent className="h-screen flex flex-col ">
+          <DrawerClose>
+            <X size={40} className={"ml-auto  mr-4 cursor-pointer"} />
+          </DrawerClose>
+          <div className="flex  mb-10 justify-center gap-4 flex-1 flex-col items-center ">
+            <DrawerClose>
+              {sections.map((section: string) => (
+                <DrawerItem
+                  key={section}
+                  name={section}
+                  handleClick={() => {
+                    setTimeout(() => {
+                      scrollToSection(section);
+                    }, 200);
+                  }}
+                />
+              ))}
+            </DrawerClose>
+          </div>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 };
@@ -52,10 +111,10 @@ const BottomNavbar = ({
   isDarkMode,
 }) => {
   return (
-    <div className="fixed flex bottom-4 items-center    left-1/2  hidden md:flex -translate-x-1/2 md:w-fit px-4   z-50  h-fit w-full">
+    <div className="fixed  bottom-4 items-center    left-1/2  hidden md:flex -translate-x-1/2 md:w-fit px-4   z-50  h-fit w-full">
       {/* BOTTOM NAVBAR */}
       <div
-        className={`font-sans items-center flex flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50" : "bg-gray-900"} text-xl  h-full font-normal `}
+        className={`font-sans items-center flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50" : "bg-gray-900"} text-xl  h-full font-normal `}
       >
         <div
           className={` relative ${isDarkMode ? "text-gray-900" : "    text-gray-50"} bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10`}
@@ -63,7 +122,7 @@ const BottomNavbar = ({
           <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
         </div>
 
-        {sections.map((section, index) => (
+        {sections.map((section: string, index: number) => (
           <Button
             isDarkMode={isDarkMode}
             active={activeSection === section}
@@ -78,10 +137,6 @@ const BottomNavbar = ({
           }
           name={"Book a call"}
         />
-        {/* MOBILE HAMBURGER ICON */}
-        <div className="sm:hidden ml-auto">
-          <List size={28} className={"text-zinc-900"} />
-        </div>
       </div>
     </div>
   );
@@ -92,12 +147,15 @@ const Navbar = ({ sections }) => {
   const activeSection = useSectionStore((state) => state.activeSection);
 
   const isDarkMode = activeSection == "Our Services";
-  console.log(isDarkMode);
 
   return (
     <div className="">
       {/* LOGO */}
-      <TopLogo isDarkMode={isDarkMode} />
+      <TopLogo
+        sections={sections}
+        scrollToSection={scrollToSection}
+        isDarkMode={isDarkMode}
+      />
       <BottomNavbar
         isDarkMode={isDarkMode}
         sections={sections}
