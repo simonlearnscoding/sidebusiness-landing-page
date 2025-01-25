@@ -39,7 +39,7 @@ const TopLogo = ({ isDarkMode, sections, scrollToSection }) => {
   return (
     <div className="">
       <div
-        className={`fixed animate-all flex  duration-600 items-center top-0 py-4  z-10 ${!isDarkMode ? "bg-white" : "bg-gray-900"} w-full`}
+        className={`fixed animate-all flex  duration-600 items-center top-0 py-4  z-50 ${!isDarkMode ? "bg-white" : "bg-gray-900"} w-full`}
       >
         <div
           className={`font-sans  animate-all  duration-600  w-fit  text-xl p-2   rounded-md ${!isDarkMode ? " bg-gray-900 text-gray-900" : " bg-gray-900 text-gray-50"}  sm:mx-10 mx-4 lg:mx-20   h-fit   font-normal`}
