@@ -1,5 +1,4 @@
 import RotatingShape from "./RotatingShape"; // Import the 3D shape
-import Image from "next/image";
 
 export default function SubHeader({ id }: { id: string }) {
   return (
