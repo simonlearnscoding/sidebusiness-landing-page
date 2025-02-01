@@ -6,28 +6,27 @@ import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 
 function ImportedModel() {
-  const ref = useRef();
+  const ref = useRef<THREE.Group>(null);
   const { scene } = useGLTF("/mobius.glb");
 
   const primaryColor = new THREE.Color("#000862");
 
   useEffect(() => {
-    scene.traverse((child) => {
-      if (child.isMesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
+    scene.traverse((child: THREE.Object3D) => {
+      if ((child as THREE.Mesh).isMesh) {
+        const mesh = child as THREE.Mesh;
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
 
-        if (child.material) {
+        if (mesh.material) {
           // Set main color and material properties
-          child.material.color = primaryColor;
-          child.material.metalness = 0.2; // Reduce metalness (0-1)
-          child.material.roughness = 0.8; // Increase roughness (0-1)
-          child.material.side = THREE.DoubleSide;
-
-          // Remove emissive override if not needed
-          child.material.emissive = new THREE.Color(0x000000);
-
-          child.material.needsUpdate = true;
+          const material = mesh.material as THREE.MeshStandardMaterial;
+          material.color = primaryColor;
+          material.metalness = 0.2; // Reduce metalness (0-1)
+          material.roughness = 0.8; // Increase roughness (0-1)
+          material.side = THREE.DoubleSide;
+          material.emissive = new THREE.Color(0x000000);
+          material.needsUpdate = true;
         }
       }
     });
