@@ -8,6 +8,7 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { LINK_TO_APPOINTMENT } from "./../constants";
 
 const Button = ({ name, handleClick, active, isDarkMode }) => {
   return (
@@ -132,9 +133,7 @@ const BottomNavbar = ({
           />
         ))}
         <CallCTA
-          onClick={() =>
-            window.open("https://calendly.com/simon-muscas/30min", "_blank")
-          }
+          onClick={() => window.open(LINK_TO_APPOINTMENT, "_blank")}
           name={"Book a call"}
         />
       </div>

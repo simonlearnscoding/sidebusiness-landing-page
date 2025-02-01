@@ -15,9 +15,6 @@ import MobileCTA from "./components/MobileCTA";
 import MeetTheTeam from "./modules/Team";
 import useSectionObserver from "@/hooks/useSectionObserver";
 
-// import OurServicesSection from "./modules/OurServices";
-// import LetsChat from "./modules/LetsChat";
-// import ParallaxComponent from "./modules/OurServices/Parallax";
 export default function Home() {
   useScrollAndMousePosition();
 
