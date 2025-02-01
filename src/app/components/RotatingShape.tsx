@@ -1,73 +1,70 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { useMemo, useRef } from "react";
+import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
+import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 
-function RotatingSShape() {
-  const meshRef = useRef();
+function ImportedModel() {
+  const ref = useRef();
+  const { scene } = useGLTF("/mobius.glb");
 
-  // Define control points that form an S-shaped curve with a subtle Z-axis variation.
-  // This twist adds extra dimensionality while still evoking your seamless S logo.
-  const curve = useMemo(() => {
-    const points = [
-      new THREE.Vector3(0, 2, 0),
-      new THREE.Vector3(1, 0.5, 0.3),
-      new THREE.Vector3(0, 0, -0.3),
-      new THREE.Vector3(-1, -0.5, 0.3),
-      new THREE.Vector3(0, -1, 0),
-    ];
-    return new THREE.CatmullRomCurve3(points, false, "catmullrom", 0.8);
-  }, []);
+  const primaryColor = new THREE.Color("#000862");
 
-  // Create a TubeGeometry that follows the S curve with a thicker radius.
-  const tubeGeometry = useMemo(() => {
-    // Increased the tube radius from 0.06 to 0.15 to make it noticeably thicker.
-    return new THREE.TubeGeometry(curve, 100, 0.15, 16, false);
-  }, [curve]);
+  useEffect(() => {
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
 
-  // Slowly rotate the shape to add dynamism.
+        if (child.material) {
+          // Set main color and material properties
+          child.material.color = primaryColor;
+          child.material.metalness = 0.2; // Reduce metalness (0-1)
+          child.material.roughness = 0.8; // Increase roughness (0-1)
+          child.material.side = THREE.DoubleSide;
+
+          // Remove emissive override if not needed
+          child.material.emissive = new THREE.Color(0x000000);
+
+          child.material.needsUpdate = true;
+        }
+      }
+    });
+  }, [scene, primaryColor]);
+
+  // Rotate the model continuously
   useFrame(() => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x += 0.005;
-      meshRef.current.rotation.y += 0.005;
+    if (ref.current) {
+      ref.current.rotation.y += 0.003;
     }
   });
 
-  return (
-    <mesh ref={meshRef} castShadow>
-      {/* Attach the custom, thicker tube geometry */}
-      <primitive object={tubeGeometry} attach="geometry" />
-      <meshStandardMaterial
-        attach="material"
-        color="#44A5DD"
-        emissive="#43A4DC"
-        metalness={0.6}
-        roughness={0.3}
-      />
-    </mesh>
-  );
+  return <primitive object={scene} ref={ref} />;
 }
 
-export default function RotatingShape() {
+export default function ModelScene() {
   return (
     <Canvas
       shadows
       className="w-full h-64"
-      camera={{ position: [0, 0, 3], fov: 50 }}
+      camera={{ position: [0, 1, 5], fov: 50 }}
     >
-      {/* Ambient light for soft overall illumination */}
-      <ambientLight intensity={0.5} />
-      {/* Directional light for dynamic shadows and highlights */}
+      {/* Basic ambient light */}
+      <ambientLight
+        color="#2A0345" // Dark purple hex code
+        intensity={1.5}
+      />
+      {/* Directional light with shadows */}
       <directionalLight
         castShadow
-        intensity={0.8}
-        position={[3, 3, 3]}
-        shadow-mapSize={{ width: 1024, height: 1024 }}
+        intensity={7}
+        position={[5, 10, 5]}
+        shadow-mapSize={2048}
       />
-      <RotatingSShape />
-      {/* OrbitControls for gentle manual inspection */}
+      {/* Environment light can help PBR materials look more natural */}
+      <Environment preset="sunset" />
+      <ImportedModel />
       <OrbitControls enableZoom={false} />
     </Canvas>
   );
