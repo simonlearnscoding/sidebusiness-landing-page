@@ -32,10 +32,6 @@ export default function Home() {
       <SubHeader id={"About Us"} />
       <WorkingWithUs />
 
-      {/* Add Rotating 3D Shape Here */}
-      <div className="flex justify-center my-8">
-        <RotatingShape />
-      </div>
       <div className="flex flex-col bg-gradient-to-br from-gray-800 from-1% to-gray-950">
         <Services id={"Our Services"} />
         <BookAnAppointment />
