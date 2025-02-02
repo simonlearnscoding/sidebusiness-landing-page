@@ -15,6 +15,7 @@ import FAQ from "./components/FAQ";
 import MobileCTA from "./components/MobileCTA";
 import MeetTheTeam from "./modules/Team";
 import useSectionObserver from "@/hooks/useSectionObserver";
+import Cursor from "./components/Cursor";
 
 export default function Home() {
   useScrollAndMousePosition();
@@ -26,6 +27,7 @@ export default function Home() {
   // return <ParallaxComponent />;
   return (
     <div className=" relative h-fit bg-white">
+      <Cursor />
       <Navbar sections={sections} />
       <Header />
       <MobileCTA />
