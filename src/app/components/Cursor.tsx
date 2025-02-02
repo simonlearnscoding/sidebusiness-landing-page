@@ -12,7 +12,7 @@ export default function CustomCursor() {
     <AnimatedCursor
       innerSize={12}
       outerSize={40}
-      color="0, 0, 0" // RGB value for #4F46E5 (your primary color)
+      color="0, 0, 0"
       outerAlpha={0.2}
       innerScale={0.7}
       outerScale={5}
