@@ -39,7 +39,7 @@ function ImportedModel() {
     }
   });
 
-  return <primitive object={scene} ref={ref} />;
+  return <primitive object={scene} ref={ref} scale={[0.75, 0.75, 0.75]} />;
 }
 
 export default function ModelScene() {
