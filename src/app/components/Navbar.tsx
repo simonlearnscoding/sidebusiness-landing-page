@@ -80,15 +80,27 @@ const MobileMenu = ({ sections, scrollToSection, isDarkMode }) => {
             className={` ${isDarkMode ? "text-gray-50" : "text-gray-950"}`}
           />
         </DrawerTrigger>
-        <DrawerContent className="h-screen flex flex-col ">
-          <DrawerClose>
-            <X size={40} className={"ml-auto  mr-4 cursor-pointer"} />
-          </DrawerClose>
-          <div className="flex  mb-10 justify-center gap-4 flex-1 flex-col items-center ">
+        <DrawerContent className="h-screen flex flex-col bg-white">
+          {" "}
+          {/* Add background color */}
+          {/* Close Button */}
+          <div className="flex justify-end p-4">
+            {" "}
+            {/* Add padding and proper alignment */}
             <DrawerClose>
-              {sections.map((section: string) => (
+              <X
+                size={32} // Smaller size for mobile
+                className="text-gray-800 cursor-pointer" // Explicit text color
+              />
+            </DrawerClose>
+          </div>
+          {/* Menu Items */}
+          <div className="flex mb-10 justify-center gap-4 flex-1 flex-col items-center">
+            {sections.map((section: string) => (
+              <DrawerClose key={section}>
+                {" "}
+                {/* Wrap each item in DrawerClose */}
                 <DrawerItem
-                  key={section}
                   name={section}
                   handleClick={() => {
                     setTimeout(() => {
@@ -96,8 +108,8 @@ const MobileMenu = ({ sections, scrollToSection, isDarkMode }) => {
                     }, 200);
                   }}
                 />
-              ))}
-            </DrawerClose>
+              </DrawerClose>
+            ))}
           </div>
         </DrawerContent>
       </Drawer>
