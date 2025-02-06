@@ -9,46 +9,45 @@ const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
 
 export default function CustomCursor() {
   return (
-    <AnimatedCursor
-      innerSize={12}
-      outerSize={40}
-      color="0, 0, 0"
-      outerAlpha={0.2}
-      innerScale={0.7}
-      outerScale={5}
-      trailingSpeed={8}
-      clickables={[
-        "a",
-        "button",
-        ".link",
-        "input",
-        "textarea",
-        "select",
-        "label",
-        '[role="button"]',
-        {
-          target: ".clickable",
-          //@ts-ignore
-          options: {
-            innerSize: 14,
-            outerSize: 45,
-            outerAlpha: 0.3,
-            innerScale: 0.6,
-            outerScale: 6,
+    <div className="opacity-40 ">
+      <AnimatedCursor
+        outerSize={250}
+        opacity={0.1}
+        innerSize={0}
+        color="0, 0, 0"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={5}
+        trailingSpeed={50}
+        clickables={[
+          "a",
+          "button",
+          ".link",
+          "input",
+          "textarea",
+          "select",
+          "label",
+          '[role="button"]',
+          {
+            target: ".clickable",
+            //@ts-ignore
+            options: {
+              innerSize: 14,
+              outerAlpha: 0.3,
+              innerScale: 0.6,
+              outerScale: 0.4,
+            },
           },
-        },
-      ]}
-      innerStyle={{
-        backgroundColor: "#ffffff",
-        mixBlendMode: "exclusion",
-      }}
-      outerStyle={{
-        border: "2px solid #ffffff",
-        borderRadius: "50%",
-        boxShadow: "0 0 15px rgba(0, 0, 0, 0.3)",
-        mixBlendMode: "exclusion",
-      }}
-      showSystemCursor={false} // Hide default cursor
-    />
+        ]}
+        outerStyle={{
+          filter: "blur(100px)",
+          zIndex: 0, // Push behind everything
+          backgroundColor: "#e5bff0",
+          borderRadius: "50%",
+          pointerEvents: "none", // Prevent interference with clicks
+        }}
+        showSystemCursor={true} // Hide default cursor
+      />
+    </div>
   );
 }
