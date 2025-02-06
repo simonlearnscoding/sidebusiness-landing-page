@@ -127,10 +127,10 @@ const BottomNavbar = ({
     <div className="fixed  bottom-4 items-center    left-1/2  hidden md:flex -translate-x-1/2 md:w-fit px-4   z-50  h-fit w-full">
       {/* BOTTOM NAVBAR */}
       <div
-        className={`font-sans items-center flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50" : "bg-gray-900"} text-xl  h-full font-normal `}
+        className={`font-sans items-center opacity-95  flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50" : "bg-gray-900"} text-xl  h-full font-normal `}
       >
         <div
-          className={` relative ${isDarkMode ? "text-gray-900" : "    text-gray-50"} bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10`}
+          className={` relative  ${isDarkMode ? "text-gray-900" : "    text-gray-50"} bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10`}
         >
           <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
         </div>
