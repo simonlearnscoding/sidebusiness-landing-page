@@ -14,7 +14,7 @@ const Button = ({ name, handleClick, active, isDarkMode }) => {
   return (
     <div
       onClick={handleClick}
-      className={`font-sans flex transition-all ${isDarkMode ? "hover:bg-gray-200" : "  hover:bg-gray-800 text-gray-50"} ${active ? (isDarkMode ? "bg-gray-200" : "bg-gray-800") : "bg-inherit"} px-4 py-2 rounded-lg cursor-pointer text-xl  h-full font-medium `}
+      className={`font-sans flex transition-all ${isDarkMode ? "hover:bg-white shadow-sm" : "  hover:bg-gray-800 text-gray-50"} ${active ? (isDarkMode ? "bg-white" : "bg-gray-800") : "bg-inherit"} px-4 py-2 rounded-lg cursor-pointer text-xl  h-full font-medium `}
     >
       {name}
     </div>
@@ -127,7 +127,7 @@ const BottomNavbar = ({
     <div className="fixed  bottom-4 items-center    left-1/2  hidden md:flex -translate-x-1/2 md:w-fit px-4   z-50  h-fit w-full">
       {/* BOTTOM NAVBAR */}
       <div
-        className={`font-sans items-center opacity-95  flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50" : "bg-gray-900"} text-xl  h-full font-normal `}
+        className={`font-sans items-center  backdrop-blur-md  flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50/90" : "bg-gray-900"} text-xl  h-full font-normal `}
       >
         <div
           className={` relative  ${isDarkMode ? "text-gray-900" : "    text-gray-50"} bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10`}
