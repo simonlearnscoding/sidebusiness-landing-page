@@ -1,1 +1,1 @@
-export const LINK_TO_APPOINTMENT = "https://calendly.com/seamlessweb/30min";
+export const LINK_TO_APPOINTMENT = "https://calendly.com/seamlessweb/45min";
