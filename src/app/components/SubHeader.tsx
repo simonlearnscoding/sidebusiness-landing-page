@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import useMousePositionStore from "@/store/useMousePositionStore";
 import RotatingShape from "./RotatingShape";
 
-export default function SubHeader({ id }: { id: string }) {
+export default function SubHeader() {
   const scrollPos = useMousePositionStore((state) => state.scrollPos);
   const roundedScrollPos = Math.floor(scrollPos / 33);
 
@@ -15,7 +15,7 @@ export default function SubHeader({ id }: { id: string }) {
   }, [blurValue]);
 
   return (
-    <section id={id} className="w-full mt-6">
+    <section className="w-full mt-6">
       {/* Main container with dynamic blur */}
       <div
         className="left-0 z-0 h-[480px] min-w-full"

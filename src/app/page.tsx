@@ -28,9 +28,9 @@ export default function Home() {
     <div className=" relative h-fit bg-white">
       <Cursor />
       <Navbar sections={sections} />
-      <Header />
+      <Header id={"About Us"} />
       <MobileCTA />
-      <SubHeader id={"About Us"} />
+      <SubHeader />
       <WorkingWithUs />
 
       <div className="flex flex-col bg-gradient-to-br from-gray-800 from-1% to-gray-950">

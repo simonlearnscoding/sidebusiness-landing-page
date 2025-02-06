@@ -55,8 +55,8 @@ export default function Services({ id }: { id: string }) {
   ];
   return (
     <section id={id} className="flex mt-10 flex-col">
-      <div className="mt-5 md:max-w-2xl lg:max-w-3xl xl:max-w-5xl md:mx-auto mx-4 ">
-        <h1 className=" text-white text-center  w-full  ">
+      <div className="mt-5  md:max-w-2xl lg:max-w-3xl xl:max-w-5xl md:mx-auto mx-4 ">
+        <h1 className=" text-white text-center  z-10  w-full  ">
           We Design, Build, And Brand it{" "}
           <span className="span pl-1">Seamlessly</span>
         </h1>
@@ -78,7 +78,7 @@ export default function Services({ id }: { id: string }) {
 
 function Service({ Icon, name, bullets }) {
   return (
-    <div className=" p-5 lg:p-8  flex hover:bg-gradient-to-tr hover:from-gray-900 hover:to-gray-800 transition-all   lg:flex-1 h-full   bg-gray-800 rounded-3xl border-solid border-[2px]  border-gray-900 hover:border-white   flex-col">
+    <div className=" p-5 lg:p-8  flex z-10 hover:bg-gradient-to-tr hover:from-gray-900 hover:to-gray-800 transition-all   lg:flex-1 h-full   bg-gray-800 rounded-3xl border-solid border-[2px]  border-gray-900 hover:border-white   flex-col">
       <div className="flex text-white flex-col  items-start gap-8 lg:gap-6 ">
         <Icon size={32} />
         <div className=" font-sans font-medium text-4xl text-white ">
