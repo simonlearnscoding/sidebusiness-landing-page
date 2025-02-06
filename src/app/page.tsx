@@ -4,7 +4,6 @@ import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import MarqueeReusable from "./components/Marquee";
-import RotatingShape from "./components/RotatingShape"; // Import the 3D shape
 import Header from "./components/Header";
 import BookAnAppointment from "./components/BookAnAppointment";
 import Services from "./components/Services";

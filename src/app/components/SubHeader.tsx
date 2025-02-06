@@ -4,7 +4,7 @@ import RotatingShape from "./RotatingShape";
 
 export default function SubHeader({ id }: { id: string }) {
   const scrollPos = useMousePositionStore((state) => state.scrollPos);
-  const roundedScrollPos = Math.floor(scrollPos / 30);
+  const roundedScrollPos = Math.floor(scrollPos / 33);
 
   // Clamp the blur value to a maximum of 20px for better control
   const blurValue = Math.min(roundedScrollPos, 20);
