@@ -22,19 +22,19 @@ const explanations = [
     name: "Simplicity",
     icon: LineSegment,
     explanation:
-      "We make website creation so simple, you’ll wonder why it ever felt hard.",
+      "We make website creation so simple, you’ll wonder why it ever felt complicated",
   },
   {
     name: "Support",
     icon: Handshake,
     explanation:
-      "Combine Vision and expertise —building great websites together, hassle-free.",
+      "Combine Vision and expertise —building great websites together, hassle-free",
   },
   {
     name: "Success",
     icon: Target,
     explanation:
-      "Turning clicks into customers —fast, smooth, and friction-free.",
+      "Turning clicks into customers —fast, smooth, and friction-free",
   },
 ];
 
@@ -42,8 +42,8 @@ export default function WorkingWithUs() {
   return (
     <div className="    flex items-center  mb-16 flex-col justify-center mx-4 lg:mx-20">
       <h1 className=" text-center lg:max-w-4xl">
-        Here's why you'll enjoy every step of the
-        <span className="pl-2 span">Journey With Us.</span>
+        Enjoy a smooth and rewarding
+        <span className="pl-4 span">Journey With Us.</span>
       </h1>
       <div className="flex  gap-4 mt-10 lg:mt-16 flex-col lg:flex-row">
         {explanations.map((explanation) => (
