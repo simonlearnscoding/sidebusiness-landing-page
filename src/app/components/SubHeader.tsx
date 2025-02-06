@@ -9,11 +9,6 @@ export default function SubHeader() {
   // Clamp the blur value to a maximum of 20px for better control
   const blurValue = Math.min(roundedScrollPos, 20);
 
-  // Debugging: Log the current blur value
-  useEffect(() => {
-    console.log("Current blur:", blurValue);
-  }, [blurValue]);
-
   return (
     <section className="w-full mt-6">
       {/* Main container with dynamic blur */}
@@ -21,6 +16,7 @@ export default function SubHeader() {
         className="left-0 z-0 h-[480px] min-w-full"
         style={{
           filter: `blur(${blurValue}px)`,
+          transform: `translateY(${scrollPos / 2}px)`,
           willChange: "filter", // Improves animation performance
         }}
       >
