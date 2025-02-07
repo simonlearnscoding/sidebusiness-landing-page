@@ -21,7 +21,7 @@ const MobileCTA = () => {
           activeSection === "header" ? "bg-primary-500" : "bg-gray-900"
         } z-20 transition-all flex justify-center text-3xl`}
       >
-        {activeSection === "contact" ? "CONTACT US" : "RESERVE A SPOT"}
+        {activeSection === "contact" ? "CONTACT US" : "GET A FREE QUOTE"}
       </div>
     </div>
   );
