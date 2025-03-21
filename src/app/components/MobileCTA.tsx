@@ -1,11 +1,12 @@
 import { useSectionStore } from "@/store/useSectionStore";
+import { LINK_TO_APPOINTMENT } from "../constants";
 
 const MobileCTA = () => {
   const scrollToSection = useSectionStore((state) => state.scrollToSection);
   const activeSection = useSectionStore((state) => state.activeSection);
 
   const handleClick = () => {
-    window.open("https://calendly.com/simon-muscas/30min", "_blank");
+    window.open(LINK_TO_APPOINTMENT, "_blank");
   };
 
   return (
@@ -20,7 +21,7 @@ const MobileCTA = () => {
           activeSection === "header" ? "bg-primary-500" : "bg-gray-900"
         } z-20 transition-all flex justify-center text-3xl`}
       >
-        {activeSection === "contact" ? "CONTACT US" : "RESERVE A SPOT"}
+        {activeSection === "contact" ? "CONTACT US" : "GET A FREE QUOTE"}
       </div>
     </div>
   );

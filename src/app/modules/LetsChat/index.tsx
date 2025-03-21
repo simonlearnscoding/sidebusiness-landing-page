@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { LINK_TO_APPOINTMENT } from "@/app/constants";
 
 const LetsChat = ({ id }: { id: string }) => {
   return (
@@ -36,7 +37,7 @@ const LetsChat = ({ id }: { id: string }) => {
           </div>
 
           <a
-            href="https://calendly.com/simon-muscas"
+            href={`${LINK_TO_APPOINTMENT}`}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-auto py-10 cursor-pointer  bg-primary-500 w-full text-9xl sm:flex items-center justify-start pl-24 overflow-hidden relative hidden group"

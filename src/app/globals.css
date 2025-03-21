@@ -114,17 +114,31 @@ body {
     @apply font-serife italic text-primary-500;
   }
 }
+/* globals.css */
+/* Add hover states for cursor interaction */
+a,
+button,
+.link,
+.clickable {
+  transition: transform 0.2s ease;
+}
 
+a:hover,
+button:hover,
+.link:hover,
+.clickable:hover {
+  transform: translateY(-1px);
+}
 @layer base {
   h1 {
-    @apply font-medium text-black tracking-[-6%] font-sans xl:text-7xl lg:text-6xl md:text-5xl sm:block  text-4xl;
+    @apply z-10 font-medium text-black tracking-[-6%] font-sans xl:text-7xl lg:text-6xl md:text-5xl sm:block  text-4xl;
   }
 
   h2 {
-    @apply font-sans  text-black lg:text-8xl md:text-7xl sm:block  sm:text-7xl text-5xl;
+    @apply font-sans z-10  text-black lg:text-8xl md:text-7xl sm:block  sm:text-7xl text-5xl;
   }
   p {
-    @apply lg:text-3xl tracking-[-2%] text-black font-sans;
+    @apply lg:text-3xl z-10 tracking-[-2%] text-black font-sans;
   }
   :root {
     --background: 0 0% 100%;

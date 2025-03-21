@@ -1,37 +1,46 @@
-import React from "react";
-import AnimatedCursor from "react-animated-cursor";
+"use client"; // Ensure this is a client component
 
-export default function Cursor() {
+import dynamic from "next/dynamic";
+
+// Dynamically import to avoid SSR issues
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
+
+export default function CustomCursor() {
   return (
-    <AnimatedCursor
-      innerSize={12}
-      outerSize={40}
-      color="255, 255, 255"
-      innerScale={0.7}
-      outerScale={5}
-      innerStyle={{
-        background: "rgba(0, 0, 0, 0.0)",
-        border: "3px solid  #4F46E5",
-      }}
-      outerStyle={{
-        background: "rgba(0, 0, 0, 0.0)",
-        borderRadius: "50%",
-        border: "3px  solid #4F46E5",
-        boxShadow: "0 0 10px #4F46E5",
-      }}
-      clickables={[
-        "a",
-        'input[type="text"]',
-        'input[type="email"]',
-        'input[type="number"]',
-        'input[type="submit"]',
-        'input[type="image"]',
-        "label[for]",
-        "select",
-        "textarea",
-        "button",
-        ".link",
-      ]}
-    />
+    <div className="opacity-40 ">
+      <AnimatedCursor
+        outerSize={250}
+        opacity={0.1}
+        innerSize={0}
+        color="0, 0, 0"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={5}
+        trailingSpeed={50}
+        clickables={[
+          "a",
+          {
+            target: ".clickable",
+            //@ts-ignore
+            options: {
+              innerSize: 0,
+              outerAlpha: 0.3,
+              innerScale: 0.7,
+              outerScale: 5,
+            },
+          },
+        ]}
+        outerStyle={{
+          filter: "blur(100px)",
+          zIndex: 0, // Push behind everything
+          backgroundColor: "#e5bff0",
+          borderRadius: "50%",
+          pointerEvents: "none", // Prevent interference with clicks
+        }}
+        showSystemCursor={true} // Hide default cursor
+      />
+    </div>
   );
 }

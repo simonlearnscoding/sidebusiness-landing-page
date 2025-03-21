@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import useMousePositionStore from "@/store/useMousePositionStore";
 
-// Custom hook to handle scroll and mouse position logic
+// Custom hook to handle scroll and mouse position logic efficiently
 const useScrollAndMousePosition = () => {
   const setMousePosition = useMousePositionStore(
     (state) => state.setMousePosition,
@@ -14,8 +14,9 @@ const useScrollAndMousePosition = () => {
   const scrollPos = useMousePositionStore((state) => state.scrollPos);
 
   const animationFrameId = useRef<number | null>(null);
+  const lastScrollTime = useRef<number>(0);
 
-  // Handle mouse movement
+  // Handle mouse movement (already optimized with requestAnimationFrame)
   const handleMouseMove = (e: MouseEvent) => {
     if (animationFrameId.current !== null) {
       cancelAnimationFrame(animationFrameId.current);
@@ -26,14 +27,18 @@ const useScrollAndMousePosition = () => {
     });
   };
 
-  // Handle scroll
+  // Handle scroll with throttling (fires every 100ms max)
   const handleScroll = () => {
-    setScrollPosition(window.scrollY);
+    const now = Date.now();
+    if (now - lastScrollTime.current > 13) {
+      // Adjust throttle interval (100ms)
+      lastScrollTime.current = now;
+      setScrollPosition(window.scrollY);
+    }
   };
 
-  // Add event listeners for scroll and mouse move
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true }); // Passive improves performance
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {

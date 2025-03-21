@@ -14,10 +14,8 @@ import FAQ from "./components/FAQ";
 import MobileCTA from "./components/MobileCTA";
 import MeetTheTeam from "./modules/Team";
 import useSectionObserver from "@/hooks/useSectionObserver";
+import Cursor from "./components/Cursor";
 
-// import OurServicesSection from "./modules/OurServices";
-// import LetsChat from "./modules/LetsChat";
-// import ParallaxComponent from "./modules/OurServices/Parallax";
 export default function Home() {
   useScrollAndMousePosition();
 
@@ -28,11 +26,13 @@ export default function Home() {
   // return <ParallaxComponent />;
   return (
     <div className=" relative h-fit bg-white">
+      <Cursor />
       <Navbar sections={sections} />
-      <Header />
+      <Header id={"About Us"} />
       <MobileCTA />
-      <SubHeader id={"About Us"} />
+      <SubHeader />
       <WorkingWithUs />
+
       <div className="flex flex-col bg-gradient-to-br from-gray-800 from-1% to-gray-950">
         <Services id={"Our Services"} />
         <BookAnAppointment />

@@ -8,12 +8,13 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { LINK_TO_APPOINTMENT } from "./../constants";
 
 const Button = ({ name, handleClick, active, isDarkMode }) => {
   return (
     <div
       onClick={handleClick}
-      className={`font-sans flex transition-all ${isDarkMode ? "hover:bg-gray-200" : "  hover:bg-gray-800 text-gray-50"} ${active ? (isDarkMode ? "bg-gray-200" : "bg-gray-800") : "bg-inherit"} px-4 py-2 rounded-lg cursor-pointer text-xl  h-full font-medium `}
+      className={`font-sans flex transition-all ${isDarkMode ? "hover:bg-white shadow-sm" : "  hover:bg-gray-800 text-gray-50"} ${active ? (isDarkMode ? "bg-white" : "bg-gray-800") : "bg-inherit"} px-4 py-2 rounded-lg cursor-pointer text-xl  h-full font-medium `}
     >
       {name}
     </div>
@@ -79,15 +80,27 @@ const MobileMenu = ({ sections, scrollToSection, isDarkMode }) => {
             className={` ${isDarkMode ? "text-gray-50" : "text-gray-950"}`}
           />
         </DrawerTrigger>
-        <DrawerContent className="h-screen flex flex-col ">
-          <DrawerClose>
-            <X size={40} className={"ml-auto  mr-4 cursor-pointer"} />
-          </DrawerClose>
-          <div className="flex  mb-10 justify-center gap-4 flex-1 flex-col items-center ">
+        <DrawerContent className="h-screen flex flex-col bg-white">
+          {" "}
+          {/* Add background color */}
+          {/* Close Button */}
+          <div className="flex justify-end p-4">
+            {" "}
+            {/* Add padding and proper alignment */}
             <DrawerClose>
-              {sections.map((section: string) => (
+              <X
+                size={32} // Smaller size for mobile
+                className="text-gray-800 cursor-pointer" // Explicit text color
+              />
+            </DrawerClose>
+          </div>
+          {/* Menu Items */}
+          <div className="flex mb-10 justify-center gap-4 flex-1 flex-col items-center">
+            {sections.map((section: string) => (
+              <DrawerClose key={section}>
+                {" "}
+                {/* Wrap each item in DrawerClose */}
                 <DrawerItem
-                  key={section}
                   name={section}
                   handleClick={() => {
                     setTimeout(() => {
@@ -95,8 +108,8 @@ const MobileMenu = ({ sections, scrollToSection, isDarkMode }) => {
                     }, 200);
                   }}
                 />
-              ))}
-            </DrawerClose>
+              </DrawerClose>
+            ))}
           </div>
         </DrawerContent>
       </Drawer>
@@ -114,10 +127,10 @@ const BottomNavbar = ({
     <div className="fixed  bottom-4 items-center    left-1/2  hidden md:flex -translate-x-1/2 md:w-fit px-4   z-50  h-fit w-full">
       {/* BOTTOM NAVBAR */}
       <div
-        className={`font-sans items-center flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50" : "bg-gray-900"} text-xl  h-full font-normal `}
+        className={`font-sans items-center  backdrop-blur-md  flex gap-2  shadow-sm rounded-xl   p-2     whitespace-nowrap   ${isDarkMode ? "bg-gray-50/90" : "bg-gray-900"} text-xl  h-full font-normal `}
       >
         <div
-          className={` relative ${isDarkMode ? "text-gray-900" : "    text-gray-50"} bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10`}
+          className={` relative  ${isDarkMode ? "text-gray-900" : "    text-gray-50"} bg-primary-500 rounded-lg w-12 flex items-center justify-center h-10`}
         >
           <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
         </div>
@@ -132,9 +145,7 @@ const BottomNavbar = ({
           />
         ))}
         <CallCTA
-          onClick={() =>
-            window.open("https://calendly.com/simon-muscas/30min", "_blank")
-          }
+          onClick={() => window.open(LINK_TO_APPOINTMENT, "_blank")}
           name={"Book a call"}
         />
       </div>
