@@ -3,7 +3,7 @@ import Image from "next/image";
 import { LINK_TO_APPOINTMENT } from "../constants";
 export default function BookAnAppointment() {
   return (
-    <div className="flex bg-gradient-to-br mt-2 relative via-[#3CAAE2] lg:mt-16 mb-8 lg:mb-20 mx-4 rounded-3xl from-primary-600 from-40% to-teal-400 lg:mx-20 flex-col shiny-hover">
+    <div className="flex bg-gradient-to-br mt-2 relative via-[#3CAAE2] lg:mt-16 mb-8 lg:mb-20 mx-4 rounded-3xl from-primary-600 from-40% to-teal-700 lg:mx-20 flex-col shiny-hover">
       {/* Shiny effect will apply to this entire card */}
       <div className="w-10/12 right-0 h-full opacity-70 z-0 absolute">
         <Image className="" src="/map.svg" fill alt="map" />
@@ -27,41 +27,27 @@ export default function BookAnAppointment() {
       </div>
 
       <style jsx>{`
-        @keyframes shiny {
-          0% {
-            transform: translateX(-100%) rotate(45deg);
-          }
-          100% {
-            transform: translateX(100%) rotate(45deg);
-          }
-        }
-
         .shiny-hover {
-          position: relative;
           overflow: hidden;
         }
-
         .shiny-hover::before {
+          filter: blur(10px);
           content: "";
           position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
           background: linear-gradient(
-            45deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0.1)
+            120deg,
+            transparent,
+            rgba(146, 148, 248, 0.8),
+            transparent
           );
-          transform: rotate(45deg);
-          animation: shiny 1.5s infinite;
-          opacity: 0;
-          transition: opacity 0.3s ease;
+          transition: all 950ms;
         }
-
         .shiny-hover:hover::before {
-          opacity: 1;
+          left: 100%;
         }
       `}</style>
     </div>
