@@ -37,7 +37,6 @@ export default function BookAnAppointment() {
         }
 
         .shiny-hover {
-          filter: blur(100px);
           position: relative;
           overflow: hidden;
         }

@@ -23,6 +23,23 @@ export default function Footer() {
           © 2025, SeamlessWeb. All rights reserved.
         </div>
         <div className="flex items-center justify-center gap-8 mt-5 lg:mt-0 text-gray-700  ">
+          <TwitterLogo
+            className="cursor-pointer"
+            onClick={() => window.open("https://x.com/Seamless_Web", "_blank")}
+            size={logoSize}
+            weight={"fill"}
+          />
+          <LinkedinLogo
+            className="cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/company/seamless-web",
+                "_blank",
+              )
+            }
+            size={logoSize}
+            weight={"fill"}
+          />
           {/* <TwitterLogo size={logoSize} weight={"fill"} /> */}
           <FacebookLogo
             className="cursor-pointer"
