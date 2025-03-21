@@ -21,21 +21,14 @@ export default function CustomCursor() {
         trailingSpeed={50}
         clickables={[
           "a",
-          "button",
-          ".link",
-          "input",
-          "textarea",
-          "select",
-          "label",
-          '[role="button"]',
           {
             target: ".clickable",
             //@ts-ignore
             options: {
-              innerSize: 14,
+              innerSize: 0,
               outerAlpha: 0.3,
-              innerScale: 0.6,
-              outerScale: 0.4,
+              innerScale: 0.7,
+              outerScale: 5,
             },
           },
         ]}
