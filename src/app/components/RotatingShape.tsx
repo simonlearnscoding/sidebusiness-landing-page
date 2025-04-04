@@ -9,7 +9,7 @@ function ImportedModel() {
   const ref = useRef<THREE.Group>(null);
   const { scene } = useGLTF("/mobius.glb");
 
-  const primaryColor = new THREE.Color("#000862");
+  const primaryColor = new THREE.Color("#4A6BFF"); // Lighter blue
 
   useEffect(() => {
     scene.traverse((child: THREE.Object3D) => {
@@ -43,6 +43,8 @@ function ImportedModel() {
 }
 
 export default function ModelScene() {
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  if (isMobile) return null;
   return (
     <Canvas
       shadows

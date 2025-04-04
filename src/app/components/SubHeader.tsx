@@ -13,7 +13,7 @@ export default function SubHeader() {
     <section className="w-full mt-6">
       {/* Main container with dynamic blur */}
       <div
-        className="left-0 z-0 h-[480px] min-w-full"
+        className="left-0 z-0 h-48 lg:h-[480px]  min-w-full"
         style={{
           filter: `blur(${blurValue}px)`,
           transform: `translateY(${scrollPos / 2}px)`,
@@ -27,6 +27,7 @@ export default function SubHeader() {
         <div className="w-[500px] blur-3xl absolute rounded-full opacity-20 h-96 bg-gradient-to-br translate-x-1/2 right-40 from-violet-400 to-emerald-100" />
 
         {/* 3D Shape */}
+
         <RotatingShape />
       </div>
     </section>
