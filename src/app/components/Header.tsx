@@ -19,7 +19,7 @@ export default function Header({ id }: { id: string }) {
           : " scale-y-105 opacity-50 blur-sm"
       } transition-all duration-1000 ease-out`}
     >
-      <h1 className="z-10">
+      <h1 className="z-10 mt-6 lg:mt-40">
         Creating a Website - Intimidating, Daunting?{" "}
         <span className="span">Not Anymore.</span>
       </h1>
