@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import useMousePositionStore from "@/store/useMousePositionStore";
 import RotatingShape from "./RotatingShape";
 
