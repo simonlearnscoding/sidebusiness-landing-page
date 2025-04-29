@@ -43,30 +43,33 @@ function ImportedModel() {
 }
 
 export default function ModelScene() {
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  if (isMobile) return null;
   return (
-    <Canvas
-      shadows
-      className="w-full h-64"
-      camera={{ position: [0, 1, 5], fov: 50 }}
-    >
-      {/* Basic ambient light */}
-      <ambientLight
-        color="#2A0345" // Dark purple hex code
-        intensity={1.5}
+    <div className="absolute  w-full h-96">
+      {/* Your existing Canvas */}
+      <Canvas
+        shadows
+        className="w-full h-full"
+        camera={{ position: [0, 1, 5], fov: 50 }}
+      >
+        {/* lights, model, controls… */}
+        <ambientLight color="#2A0345" intensity={1.5} />
+        <directionalLight
+          castShadow
+          intensity={7}
+          position={[5, 10, 5]}
+          shadow-mapSize={2048}
+        />
+        <Environment preset="sunset" />
+        <ImportedModel />
+        <OrbitControls enableZoom={false} />
+      </Canvas>
+
+      {/* Invisible div that sits on top and blocks pointer events */}
+      <div
+        className="absolute inset-0 z-10 bg-transparent"
+        // stops all pointer events from reaching the Canvas underneath:
+        style={{ pointerEvents: "all" }}
       />
-      {/* Directional light with shadows */}
-      <directionalLight
-        castShadow
-        intensity={7}
-        position={[5, 10, 5]}
-        shadow-mapSize={2048}
-      />
-      {/* Environment light can help PBR materials look more natural */}
-      <Environment preset="sunset" />
-      <ImportedModel />
-      <OrbitControls enableZoom={false} />
-    </Canvas>
+    </div>
   );
 }
