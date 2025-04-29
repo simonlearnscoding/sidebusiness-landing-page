@@ -40,8 +40,8 @@ const explanations = [
 
 export default function WorkingWithUs() {
   return (
-    <div className="    flex items-center  mb-16 flex-col justify-center mx-4 lg:mx-20">
-      <h1 className=" text-center lg:max-w-4xl">
+    <div className="flex items-center   mb-16 flex-col justify-center mx-4 lg:mx-20">
+      <h1 className=" text-center  lg:max-w-4xl">
         Enjoy a smooth and rewarding
         <span className="pl-4 span">Journey With Us.</span>
       </h1>
