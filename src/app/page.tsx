@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className=" relative h-fit bg-white">
       <GradientOverlay />
-      <Cursor />
+      {/* <Cursor /> */}
       <Navbar sections={sections} />
       <Header id={"About Us"} />
       <MobileCTA />

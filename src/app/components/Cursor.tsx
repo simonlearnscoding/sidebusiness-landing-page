@@ -20,13 +20,13 @@ export default function CustomCursor() {
         outerScale={5}
         trailingSpeed={50}
         clickables={[
-          "a",
+          ".bruuhkkh",
           {
             target: ".clickable",
             //@ts-ignore
             options: {
               innerSize: 0,
-              outerAlpha: 0.3,
+              outerAlpha: 0.2,
               innerScale: 0.7,
               outerScale: 5,
             },
