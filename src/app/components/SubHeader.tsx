@@ -20,12 +20,6 @@ export default function SubHeader() {
           willChange: "filter",
         }}
       >
-        {/* Gradient overlay 1 - made responsive */}
-        <div className="w-[80vw] max-w-[500px] blur-3xl absolute rounded-full opacity-40 h-64 sm:h-96 bg-gradient-to-br right-1/2 translate-x-1/2 from-pink-400 to-blue-500" />
-
-        {/* Gradient overlay 2 - made responsive */}
-        <div className="w-[80vw] max-w-[500px] blur-3xl absolute rounded-full opacity-20 h-64 sm:h-96 bg-gradient-to-br translate-x-1/2 right-[20%] sm:right-40 from-violet-400 to-emerald-100" />
-
         <RotatingShape />
       </div>
     </section>
