@@ -9,13 +9,18 @@ type MemberProps = {
   image: string;
 };
 
-const TeamMember = ({ data }: { data: MemberProps }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
+const TeamMember = ({
+  data,
+  isFlipped,
+  onFlip,
+}: {
+  data: MemberProps;
+  isFlipped: boolean;
+  onFlip: (name: string) => void;
+}) => {
   const handleClick = () => {
     if (window.innerWidth <= 768) {
-      // Toggle flip for mobile
-      setIsFlipped((prev) => !prev);
+      onFlip(data.name);
     }
   };
 
