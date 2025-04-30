@@ -48,7 +48,6 @@ export default function TeamArea() {
               data={member}
               isFlipped={flippedName === member.name}
               onFlip={handleCardFlip}
-              isMobile={isMobile}
             />
           </div>
         ))}
