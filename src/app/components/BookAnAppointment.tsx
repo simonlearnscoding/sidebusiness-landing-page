@@ -29,25 +29,28 @@ export default function BookAnAppointment() {
       <style jsx>{`
         .shiny-hover {
           overflow: hidden;
+          position: relative; /* Ensures proper stacking context */
         }
         .shiny-hover::before {
           filter: blur(10px);
           content: "";
           position: absolute;
           top: 0;
-          left: -100%;
+          left: -100%; /* Starts hidden by default */
           width: 100%;
           height: 100%;
           background: linear-gradient(
             120deg,
             transparent,
-            rgba(146, 148, 248, 0.8),
+            rgba(255, 255, 255, 0.8),
             transparent
           );
-          transition: all 950ms;
+          opacity: 0; /* Hidden by default */
         }
         .shiny-hover:hover::before {
-          left: 100%;
+          opacity: 1; /* Fades in on hover */
+          left: 100%; /* Moves to the right */
+          transition: all 950ms ease-in-out; /* Only applies on hover */
         }
       `}</style>
     </div>
