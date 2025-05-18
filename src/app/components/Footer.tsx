@@ -3,6 +3,7 @@ import {
   FacebookLogo,
   LinkedinLogo,
   InstagramLogo,
+  Mailbox,
 } from "@phosphor-icons/react";
 
 export default function Footer() {
@@ -60,6 +61,14 @@ export default function Footer() {
                 "https://www.instagram.com/seamlessweb.dev/",
                 "_blank",
               )
+            }
+            size={logoSize}
+            weight={"fill"}
+          />
+          <Mailbox
+            className="cursor-pointer"
+            onClick={() =>
+              (window.location.href = "mailto:hello@seamlessweb.dev")
             }
             size={logoSize}
             weight={"fill"}
