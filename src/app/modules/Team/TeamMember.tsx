@@ -11,13 +11,14 @@ type MemberProps = {
 
 const TeamMember = ({
   data,
-  isFlipped,
+  flippedName,
   onFlip,
 }: {
   data: MemberProps;
-  isFlipped: boolean;
+  flippedName: string | null;
   onFlip: (name: string) => void;
 }) => {
+  const isFlipped = flippedName === data.name;
   const handleClick = () => {
     if (window.innerWidth <= 768) {
       onFlip(data.name);
@@ -32,7 +33,7 @@ const TeamMember = ({
       <div
         className={`relative w-full h-full  [transform-style:preserve-3d] transition-transform duration-300 ease-out ${
           isFlipped ? "[transform:rotateY(180deg)]" : ""
-        } group-hover:[transform:rotateY(180deg)]`}
+        } sm:group-hover:[transform:rotateY(180deg)]`}
       >
         {/* Front Side */}
         <div

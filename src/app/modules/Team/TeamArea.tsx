@@ -31,9 +31,8 @@ export default function TeamArea() {
 
   const handleCardFlip = (name: string) => {
     if (!isMobile) return;
-    console.log("flippedName", flippedName);
-    console.log("name", name);
-    setFlippedName((prev) => (prev === name ? null : name));
+    const settingFlipped = flippedName == name ? null : name;
+    setFlippedName((prev) => settingFlipped);
   };
 
   return (
@@ -46,7 +45,7 @@ export default function TeamArea() {
           >
             <TeamMember
               data={member}
-              isFlipped={flippedName === member.name}
+              flippedName={flippedName}
               onFlip={handleCardFlip}
             />
           </div>
