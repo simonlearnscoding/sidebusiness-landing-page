@@ -3,7 +3,7 @@ import {
   FacebookLogo,
   LinkedinLogo,
   InstagramLogo,
-  Mailbox,
+  EnvelopeSimple,
 } from "@phosphor-icons/react";
 
 export default function Footer() {
@@ -65,7 +65,7 @@ export default function Footer() {
             size={logoSize}
             weight={"fill"}
           />
-          <Mailbox
+          <EnvelopeSimple
             className="cursor-pointer"
             onClick={() =>
               (window.location.href = "mailto:hello@seamlessweb.dev")
