@@ -50,7 +50,7 @@ export default function BookAnAppointment() {
         .shiny-hover:hover::before {
           opacity: 1; /* Fades in on hover */
           left: 100%; /* Moves to the right */
-          transition: all 950ms ease-in-out; /* Only applies on hover */
+          transition: all 600ms ease-in-out; /* Only applies on hover */
         }
       `}</style>
     </div>
