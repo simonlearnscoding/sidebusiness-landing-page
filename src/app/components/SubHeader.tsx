@@ -10,7 +10,7 @@ export default function SubHeader() {
   return (
     <section className="w-full overflow-hidden">
       <div
-        className="left-0 z-0 mt-12 lg:h-[480px] w-full"
+        className="left-0  mb-28 lg:mb-40 mt-12 lg:h-[480px] w-full"
         style={{
           filter: `blur(${blurValue}px)`,
           transform: `translateY(${scrollPos / 2}px)`,
