@@ -1,23 +1,23 @@
 "use client";
 import useMousePositionStore from "@/store/useMousePositionStore";
-import RotatingShape from "./RotatingShape";
+import { OurWorkCarousell } from "./OurWorkCarousell";
 
 export default function SubHeader() {
   const scrollPos = useMousePositionStore((state) => state.scrollPos);
-  const roundedScrollPos = Math.floor(scrollPos / 33);
+  const roundedScrollPos = Math.floor(scrollPos / 60);
   const blurValue = Math.min(roundedScrollPos, 20);
 
   return (
-    <section className="w-full mt-24 overflow-hidden">
+    <section className="w-full overflow-hidden">
       <div
-        className="left-0 z-0 h-96 lg:h-[480px] w-full"
+        className="left-0 z-0 mt-12 lg:h-[480px] w-full"
         style={{
           filter: `blur(${blurValue}px)`,
           transform: `translateY(${scrollPos / 2}px)`,
           willChange: "filter",
         }}
       >
-        <RotatingShape />
+        <OurWorkCarousell />
       </div>
     </section>
   );
